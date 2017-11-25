@@ -1,0 +1,6 @@
+{
+  dbConnCheck {
+    error
+    message
+  }
+}

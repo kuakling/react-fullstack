@@ -1,0 +1,83 @@
+// .header {
+//   &:global(.ant-layout-header){
+//     height: 40px;
+//     line-height: 40px;
+//     padding: 0 10px;
+//     background-color: rgba(0, 0, 0, .5);
+//     box-shadow: 0 1px 6px rgba(0,0,0,.2);
+//     color: #fff;
+//     display: flex;
+//     overflow: hidden;
+//   }
+
+//   .left__pane {
+//     flex: 1;
+//     text-align: left;
+
+//     .item {
+//       display: inline-block;
+//       margin: 0 10px;
+//     }
+//   }
+//   .right__pane {
+//     flex: 1;
+//     text-align: right;
+    
+//     .item {
+//       display: inline-block;
+//       margin: 0 10px;
+//     }
+//   }
+// }
+
+.content {
+  color: #fff;
+  overflow: auto;
+
+  &.state__login{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+
+  &.app__drower_shown{
+    visibility: hidden;
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+
+  &:global(.ant-layout-footer){
+    padding: 3px 10px;
+  }
+}
+
+.btn__call__app__drawer{
+  z-index: 1001;
+
+  &:global(.ant-btn-circle) {
+    width: 50px;
+    height: 50px;
+  }
+
+  :global(.anticon) {
+    font-size: 30px;
+  }
+}
+
+.app__drawer__container{
+
+  &:global(.ant-modal){
+    padding-bottom: 60px;
+  }
+  :global(.ant-modal-header) {
+    background-color: transparent;
+    border: none
+  }
+  :global(.ant-modal-content){
+    height: 100%;
+    background-color: transparent;
+  }
+}

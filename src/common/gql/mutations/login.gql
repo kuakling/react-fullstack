@@ -1,0 +1,21 @@
+#import "../fragments/user_profile.gql"
+
+mutation login($identity: String, $password: String) {
+  login(identity: $identity, password: $password) {
+    ok
+    errors {
+      field
+      message
+    }
+    jwt
+    user {
+      id
+      email
+      username
+      status
+      profile {
+        ...UserProfile
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+#import "../../fragments/user_profile.gql"
+
+mutation userProfileUpdate(
+  $user_id: Int, 
+  $firstname: String,
+  $lastname: String,
+  # $avatar_offset: String,
+  # $avatar_cropped: String,
+  # $avatar: String,
+  # $cover_offset: String,
+  # $cover_cropped: String,
+  # $cover: String,
+  $bio: String,
+) {
+  userProfileUpdate(
+    user_id: $user_id,
+    firstname: $firstname,
+    lastname: $lastname
+    # avatar_offset: $avatar_offset
+    # avatar_cropped: $avatar_cropped
+    # avatar: $avatar
+    # cover_offset: $cover_offset
+    # cover_cropped: $cover_cropped
+    # cover: $cover
+    bio: $bio
+  ){
+    ok
+    profile{
+      ...UserProfile
+    }
+  }
+}

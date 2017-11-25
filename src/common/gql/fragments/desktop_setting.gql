@@ -1,0 +1,5 @@
+fragment DesktopSetting on DesktopSetting {
+  id
+  user_id
+  settings
+} 

@@ -1,0 +1,2854 @@
+$alert-message-color: $heading-color;
+$alert-text-color: $text-color;
+
+::-moz-selection, ::selection {
+  background: $primary-color;
+}
+
+// Headers
+h1, h2, h3, h4, h5, h6 {
+  color: $heading-color;
+}
+
+// Links
+a {
+  color: $link-color;
+  &:hover {
+    color: $link-hover-color;
+  }
+  &:active {
+    color: $link-active-color;
+  }
+}
+
+/******** ALERT ********/
+
+.#{$ant-prefix}-alert-success {
+  border: 1px solid $green-2;
+  background-color: $green-1;
+  .#{$ant-prefix}-alert-icon {
+    color: $success-color;
+  }
+}
+
+.#{$ant-prefix}-alert-info {
+  border: 1px solid $primary-2;
+  background-color: $primary-1;
+  .#{$ant-prefix}-alert-icon {
+    color: $info-color;
+  }
+}
+
+.#{$ant-prefix}-alert-warning {
+  border: 1px solid $yellow-2;
+  background-color: $yellow-1;
+  .#{$ant-prefix}-alert-icon {
+    color: $warning-color;
+  }
+}
+
+.#{$ant-prefix}-alert-error {
+  border: 1px solid $red-2;
+  background-color: $red-1;
+  .#{$ant-prefix}-alert-icon {
+    color: $error-color;
+  }
+}
+
+.#{$ant-prefix}-alert-with-description {
+  color: $text-color;
+  .#{$ant-prefix}-alert-message {
+    color: $alert-message-color;
+  }
+}
+
+/******** ANCHOR *********/
+
+.#{$ant-prefix}-anchor-wrapper {
+  background-color: $component-background;
+}
+
+.#{$ant-prefix}-anchor-ink:before {
+  background-color: $border-color-split;
+}
+
+.#{$ant-prefix}-anchor-ink-ball {
+  border: 3px solid $primary-color;
+  background-color: $component-background;
+}
+
+.#{$ant-prefix}-anchor-link-title {
+  color: $text-color;
+}
+
+.#{$ant-prefix}-anchor-link-active > .#{$ant-prefix}-anchor-link-title {
+  color: $primary-color;
+}
+
+/******** AUTO COMPLETE ********/
+
+.#{$ant-prefix}-select-auto-complete.#{$ant-prefix}-select .#{$ant-prefix}-input {
+  &:focus, &:hover {
+    border-color: $primary-2;
+  }
+}
+
+/******* SELECT ******/
+
+.#{$ant-prefix}-select {
+  color: $text-color;
+}
+
+.#{$ant-prefix}-select-arrow {
+  color: $text-color-secondary;
+}
+
+.#{$ant-prefix}-select-selection {
+  background-color: $component-background;
+  border: 1px solid $border-color-base;
+  &:hover {
+    border-color: $primary-2;
+  }
+}
+
+.#{$ant-prefix}-select-focused .#{$ant-prefix}-select-selection {
+  border-color: $primary-2;
+}
+
+.#{$ant-prefix}-select-selection {
+  &:focus, &:active {
+    border-color: $primary-2;
+  }
+}
+
+.#{$ant-prefix}-select-selection__clear {
+  color: $disabled-color;
+  &:hover {
+    color: $text-color-secondary;
+  }
+}
+
+.#{$ant-prefix}-select-disabled {
+  color: $disabled-color;
+  .#{$ant-prefix}-select-selection {
+    background: $background-color-base;
+    &:hover, &:focus, &:active {
+      border-color: $border-color-base;
+    }
+  }
+  .#{$ant-prefix}-select-selection--multiple .#{$ant-prefix}-select-selection__choice {
+    background: $background-color-active;
+  }
+  .#{$ant-prefix}-select-selection__choice__remove {
+    color: $disabled-color;
+    &:hover {
+      color: $disabled-color;
+    }
+  }
+}
+
+.#{$ant-prefix}-select-selection__placeholder, .#{$ant-prefix}-select-search__field__placeholder {
+  color: $input-placeholder-color;
+}
+
+.#{$ant-prefix}-select-selection--multiple {
+  .#{$ant-prefix}-select-selection__choice {
+    color: $text-color ;
+    background-color: $tag-default-bg;
+  }
+  .#{$ant-prefix}-select-selection__choice__remove {
+    color: $text-color-secondary;
+    &:hover {
+      color: $layout-header-background;
+    }
+  }
+}
+
+.#{$ant-prefix}-select-open .#{$ant-prefix}-select-selection {
+  border-color: $primary-2;
+}
+
+.#{$ant-prefix}-select-dropdown-menu-item-group-title {
+  color: $text-color-secondary;
+}
+
+.#{$ant-prefix}-select-dropdown-menu-item {
+  color: $text-color;
+}
+
+.#{$ant-prefix}-select-dropdown-menu-item-disabled {
+  color: $disabled-color;
+  &:hover {
+    color: $disabled-color;
+  }
+}
+
+.#{$ant-prefix}-select-dropdown-menu-item-selected {
+  background-color: $background-color-base;
+  color: $text-color;
+  &:hover {
+    background-color: $background-color-base;
+    color: $text-color;
+  }
+}
+
+.#{$ant-prefix}-select-dropdown-menu-item-active {
+  background-color: $primary-1;
+}
+
+.#{$ant-prefix}-select-dropdown-menu-item-divider {
+  background-color: #e5e5e5;
+}
+
+.#{$ant-prefix}-select-dropdown.#{$ant-prefix}-select-dropdown--multiple {
+  .#{$ant-prefix}-select-dropdown-menu-item:hover:after {
+    color: #ddd;
+  }
+  .#{$ant-prefix}-select-dropdown-menu-item-selected {
+    &:after, &:hover:after {
+      color: $primary-color;
+    }
+  }
+}
+
+/******* INPUT SEARCH *******/
+
+.#{$ant-prefix}-input-search-icon:hover {
+  color: $primary-color;
+}
+
+.#{$ant-prefix}-search-input {
+  .#{$ant-prefix}-search-btn {
+    color: $text-color;
+    background-color: $component-background;
+    border-color: $normal-color;
+    &:hover, &:focus {
+      color: $primary-color;
+      background-color: $component-background;
+      border-color: $primary-color;
+    }
+    &:active, &.active {
+      color: $primary-8;
+      background-color: $component-background;
+      border-color: $primary-8;
+    }
+    &.disabled, &[disabled], &.disabled:hover, &[disabled]:hover, &.disabled:focus, &[disabled]:focus, &.disabled:active, &[disabled]:active, &.disabled.active, &[disabled].active {
+      color: $disabled-color;
+      background-color: $background-color-base;
+      border-color: $normal-color;
+    }
+    &:hover, &:focus, &:active, &.active {
+      background: $component-background;
+    }
+    &:hover {
+      border-color: $normal-color;
+    }
+  }
+  &.#{$ant-prefix}-search-input-focus .#{$ant-prefix}-search-btn-noempty, &:hover .#{$ant-prefix}-search-btn-noempty {
+    color: $component-background;
+    background-color: $primary-color;
+    border-color: $primary-color;
+  }
+  &.#{$ant-prefix}-search-input-focus .#{$ant-prefix}-search-btn-noempty:hover, &:hover .#{$ant-prefix}-search-btn-noempty:hover, &.#{$ant-prefix}-search-input-focus .#{$ant-prefix}-search-btn-noempty:focus, &:hover .#{$ant-prefix}-search-btn-noempty:focus {
+    color: $component-background;
+    background-color: $primary-4;
+    border-color: $primary-4;
+  }
+  &.#{$ant-prefix}-search-input-focus .#{$ant-prefix}-search-btn-noempty:active, &:hover .#{$ant-prefix}-search-btn-noempty:active, &.#{$ant-prefix}-search-input-focus .#{$ant-prefix}-search-btn-noempty.active, &:hover .#{$ant-prefix}-search-btn-noempty.active {
+    color: $component-background;
+    background-color: $primary-8;
+    border-color: $primary-8;
+  }
+  &.#{$ant-prefix}-search-input-focus .#{$ant-prefix}-search-btn-noempty.disabled, &:hover .#{$ant-prefix}-search-btn-noempty.disabled, &.#{$ant-prefix}-search-input-focus .#{$ant-prefix}-search-btn-noempty[disabled], &:hover .#{$ant-prefix}-search-btn-noempty[disabled], &.#{$ant-prefix}-search-input-focus .#{$ant-prefix}-search-btn-noempty.disabled:hover, &:hover .#{$ant-prefix}-search-btn-noempty.disabled:hover, &.#{$ant-prefix}-search-input-focus .#{$ant-prefix}-search-btn-noempty[disabled]:hover, &:hover .#{$ant-prefix}-search-btn-noempty[disabled]:hover, &.#{$ant-prefix}-search-input-focus .#{$ant-prefix}-search-btn-noempty.disabled:focus, &:hover .#{$ant-prefix}-search-btn-noempty.disabled:focus, &.#{$ant-prefix}-search-input-focus .#{$ant-prefix}-search-btn-noempty[disabled]:focus, &:hover .#{$ant-prefix}-search-btn-noempty[disabled]:focus, &.#{$ant-prefix}-search-input-focus .#{$ant-prefix}-search-btn-noempty.disabled:active, &:hover .#{$ant-prefix}-search-btn-noempty.disabled:active, &.#{$ant-prefix}-search-input-focus .#{$ant-prefix}-search-btn-noempty[disabled]:active, &:hover .#{$ant-prefix}-search-btn-noempty[disabled]:active, &.#{$ant-prefix}-search-input-focus .#{$ant-prefix}-search-btn-noempty.disabled.active, &:hover .#{$ant-prefix}-search-btn-noempty.disabled.active, &.#{$ant-prefix}-search-input-focus .#{$ant-prefix}-search-btn-noempty[disabled].active, &:hover .#{$ant-prefix}-search-btn-noempty[disabled].active {
+    color: $disabled-color;
+    background-color: $background-color-base;
+    border-color: $normal-color;
+  }
+}
+
+.#{$ant-prefix}-input {
+  color: $text-color;
+  background-color: $component-background;
+  border: 1px solid $normal-color;
+  &:hover {
+    border-color: $primary-4;
+  }
+  &:focus {
+    border-color: $primary-4;
+  }
+}
+
+.#{$ant-prefix}-input-group-addon {
+  color: $text-color;
+  background-color: $background-color-active;
+  border: 1px solid $normal-color;
+  .#{$ant-prefix}-select-open .#{$ant-prefix}-select-selection, .#{$ant-prefix}-select-focused .#{$ant-prefix}-select-selection {
+    color: $primary-color;
+  }
+}
+
+.#{$ant-prefix}-input-affix-wrapper {
+  &:hover .#{$ant-prefix}-input:not(.#{$ant-prefix}-input-disabled) {
+    border-color: $primary-4;
+  }
+  .#{$ant-prefix}-input-prefix, .#{$ant-prefix}-input-suffix {
+    color: $text-color;
+  }
+}
+
+/******** AVATAR ********/
+
+.#{$ant-prefix}-avatar {
+  background: $avatar-bg;
+  color: $component-background;
+}
+
+.#{$ant-prefix}-back-top-content {
+  background-color: $back-top-bg;
+  color: $component-background;
+  &:hover {
+    background-color: $back-top-hover-bg;
+  }
+}
+
+/********* BADGE ********/
+
+.#{$ant-prefix}-badge-count {
+  background: $highlight-color;
+  color: $component-background;
+  a {
+    color: $component-background;
+    &:hover {
+      color: $component-background;
+    }
+  }
+}
+
+.#{$ant-prefix}-badge-dot {
+  background: $highlight-color;
+  box-shadow: 0 0 0 1px $component-background;
+}
+
+.#{$ant-prefix}-badge-status-success {
+  background-color: $success-color;
+}
+
+.#{$ant-prefix}-badge-status-processing {
+  background-color: $primary-color;
+  &:after {
+    border: 1px solid $primary-color;
+  }
+}
+
+.#{$ant-prefix}-badge-status-default {
+  background-color: $normal-color;
+}
+
+.#{$ant-prefix}-badge-status-error {
+  background-color: $error-color;
+}
+
+.#{$ant-prefix}-badge-status-warning {
+  background-color: $warning-color;
+}
+
+.#{$ant-prefix}-badge-status-text {
+  color: $text-color;
+}
+
+/********* BREADCRUMB *********/
+
+.#{$ant-prefix}-breadcrumb {
+  color: $text-color;
+  a {
+    color: $text-color;
+    &:hover {
+      color: $primary-4;
+    }
+  }
+  > span:last-child {
+    color: $text-color;
+  }
+}
+
+/****** BUTTON *******/
+
+.#{$ant-prefix}-btn-primary {
+  color: $component-background;
+  background-color: $primary-color;
+  border-color: $primary-color;
+  &:hover, &:focus {
+    color: $component-background;
+    background-color: $primary-4;
+    border-color: $primary-4;
+  }
+  &:active, &.active {
+    color: $component-background;
+    background-color: $primary-8;
+    border-color: $primary-8;
+  }
+}
+
+.#{$ant-prefix}-btn-group .#{$ant-prefix}-btn-primary {
+  &:not(:first-child):not(:last-child) {
+    border-right-color: $primary-8;
+    border-left-color: $primary-8;
+  }
+  &:first-child:not(:last-child) {
+    border-right-color: $primary-8;
+  }
+  &:last-child:not(:first-child), + .#{$ant-prefix}-btn-primary {
+    border-left-color: $primary-8;
+  }
+}
+
+.#{$ant-prefix}-btn-ghost {
+  &:hover, &:focus {
+    color: $primary-color;
+    border-color: $primary-color;
+  }
+  &:active, &.active {
+    color: $primary-8;
+    border-color: $primary-8;
+  }
+}
+
+.#{$ant-prefix}-btn-dashed {
+  &:hover, &:focus {
+    color: $primary-color;
+    background-color: $component-background;
+    border-color: $primary-color;
+  }
+  &:active, &.active {
+    color: $primary-8;
+    background-color: $component-background;
+    border-color: $primary-8;
+  }
+}
+
+.#{$ant-prefix}-btn-danger {
+  color: $btn-danger-color;
+  background-color: $background-color-base;
+  border-color: $normal-color;
+  &:hover, &:focus {
+    color: $component-background;
+    background-color: $btn-danger-color;
+    border-color: $btn-danger-color;
+  }
+  &:active, &.active {
+    color: $component-background;
+    background-color: $red-7;
+    border-color: $red-7;
+  }
+}
+
+.#{$ant-prefix}-btn-clicked:after {
+  border: 0 solid $primary-color;
+}
+
+.#{$ant-prefix}-btn-danger.#{$ant-prefix}-btn-clicked:after {
+  border-color: $btn-danger-color;
+}
+
+.#{$ant-prefix}-btn-background-ghost {
+  &.#{$ant-prefix}-btn-primary {
+    color: $primary-color;
+    border-color: $primary-color;
+    &:hover, &:focus {
+      color: $primary-4;
+      border-color: $primary-4;
+    }
+    &:active, &.active {
+      color: $primary-8;
+      border-color: $primary-8;
+    }
+  }
+  &.#{$ant-prefix}-btn-danger {
+    color: $btn-danger-color;
+    border-color: $btn-danger-color;
+    &:hover, &:focus {
+      color: $red-3;
+      border-color: $red-3;
+    }
+    &:active, &.active {
+      color: $red-4;
+      border-color: $red-4;
+    }
+  }
+}
+
+.#{$ant-prefix}-fullcalendar-value:active {
+  background: $primary-color;
+  color: $component-background;
+}
+
+.#{$ant-prefix}-fullcalendar-today .#{$ant-prefix}-fullcalendar-value, .#{$ant-prefix}-fullcalendar-month-panel-current-cell .#{$ant-prefix}-fullcalendar-value {
+  box-shadow: 0 0 0 1px $primary-color;
+}
+
+.#{$ant-prefix}-fullcalendar-selected-day .#{$ant-prefix}-fullcalendar-value, .#{$ant-prefix}-fullcalendar-month-panel-selected-cell .#{$ant-prefix}-fullcalendar-value {
+  background: $primary-color;
+  color: $component-background;
+}
+
+.#{$ant-prefix}-fullcalendar-fullscreen {
+  .#{$ant-prefix}-fullcalendar-month:hover, .#{$ant-prefix}-fullcalendar-date:hover {
+    background: $item-hover-bg;
+  }
+  .#{$ant-prefix}-fullcalendar-month:active, .#{$ant-prefix}-fullcalendar-date:active {
+    background: $primary-2;
+  }
+  .#{$ant-prefix}-fullcalendar-month-panel-current-cell .#{$ant-prefix}-fullcalendar-month, .#{$ant-prefix}-fullcalendar-today .#{$ant-prefix}-fullcalendar-date {
+    border-top-color: $primary-color;
+  }
+  .#{$ant-prefix}-fullcalendar-month-panel-selected-cell .#{$ant-prefix}-fullcalendar-month, .#{$ant-prefix}-fullcalendar-selected-day .#{$ant-prefix}-fullcalendar-date {
+    background: $primary-1;
+  }
+  .#{$ant-prefix}-fullcalendar-month-panel-selected-cell .#{$ant-prefix}-fullcalendar-value, .#{$ant-prefix}-fullcalendar-selected-day .#{$ant-prefix}-fullcalendar-value {
+    color: $primary-color;
+  }
+  .#{$ant-prefix}-fullcalendar-last-month-cell .#{$ant-prefix}-fullcalendar-date, .#{$ant-prefix}-fullcalendar-next-month-btn-day .#{$ant-prefix}-fullcalendar-date {
+    color: $disabled-color;
+  }
+}
+
+/****** RADIO ******/
+
+.#{$ant-prefix}-radio-wrapper:hover .#{$ant-prefix}-radio .#{$ant-prefix}-radio-inner, .#{$ant-prefix}-radio:hover .#{$ant-prefix}-radio-inner, .#{$ant-prefix}-radio-focused .#{$ant-prefix}-radio-inner {
+  border-color: $primary-color;
+}
+
+.#{$ant-prefix}-radio-checked:after {
+  border: 1px solid $primary-color;
+}
+
+.#{$ant-prefix}-radio-inner {
+  border-color: $normal-color;
+  background-color: $component-background;
+  &:after {
+    background-color: $primary-color;
+  }
+}
+
+.#{$ant-prefix}-radio-checked .#{$ant-prefix}-radio-inner {
+  border-color: $primary-color;
+}
+
+.#{$ant-prefix}-radio-disabled {
+  .#{$ant-prefix}-radio-inner {
+    border-color: $normal-color !important;
+    background-color: $background-color-base;
+  }
+  + span {
+    color: $disabled-color;
+  }
+}
+
+.#{$ant-prefix}-radio-button-wrapper {
+  border: 1px solid $normal-color;
+  background: $component-background;
+  a {
+    color: $text-color;
+  }
+  &:not(:first-child)::before {
+    background-color: $normal-color;
+  }
+  &:first-child {
+    border-left: 1px solid $normal-color;
+  }
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+.#{$ant-prefix}-radio-button-wrapper-focused {
+  color: $primary-color;
+}
+
+.#{$ant-prefix}-radio-button-wrapper-checked {
+  background: $component-background;
+  border-color: $primary-color;
+  color: $primary-color;
+  box-shadow: -1px 0 0 0 $primary-color;
+  &::before {
+    background-color: $primary-color  !important;
+  }
+  &:first-child {
+    border-color: $primary-color;
+  }
+  &:hover {
+    border-color: $primary-4;
+    box-shadow: -1px 0 0 0 $primary-4;
+    color: $primary-4;
+  }
+  &:active {
+    border-color: $primary-8;
+    box-shadow: -1px 0 0 0 $primary-8;
+    color: $primary-8;
+  }
+}
+
+.#{$ant-prefix}-radio-button-wrapper-disabled {
+  border-color: $normal-color;
+  background-color: $background-color-base;
+  color: $disabled-color;
+  &:first-child, &:hover {
+    border-color: $normal-color;
+    background-color: $background-color-base;
+    color: $disabled-color;
+  }
+  &:first-child {
+    border-left-color: $normal-color;
+  }
+  &.#{$ant-prefix}-radio-button-wrapper-checked {
+    color: $component-background;
+    border-color: $normal-color;
+    box-shadow: none;
+  }
+}
+
+/****** CARD *****/
+
+.#{$ant-prefix}-card {
+  background: $component-background;
+  &:not(.#{$ant-prefix}-card-no-hovering):hover {
+    box-shadow: 0 1px 6px $shadow-color;
+    border-color: $shadow-color;
+  }
+}
+
+.#{$ant-prefix}-card-bordered {
+  border: 1px solid $border-color-split;
+}
+
+.#{$ant-prefix}-card-head {
+  background: $component-background;
+  border-bottom: 1px solid $border-color-split;
+}
+
+.#{$ant-prefix}-card-head-title {
+  color: $heading-color;
+}
+
+.#{$ant-prefix}-card-grid {
+  box-shadow: 1px 0 0 0 $border-color-split, 0 1px 0 0 $border-color-split, 1px 1px 0 0 $border-color-split, 1px 0 0 0 $border-color-split inset, 0 1px 0 0 $border-color-split inset;
+}
+
+/******** CAROUSEL ******/
+
+.#{$ant-prefix}-carousel .slick-dots li {
+  button, &.slick-active button {
+    background: $component-background;
+  }
+}
+
+/******** PICKER *******/
+
+.#{$ant-prefix}-cascader-picker {
+  background-color: $component-background;
+}
+
+.#{$ant-prefix}-cascader-picker-disabled {
+  background: $background-color-base;
+  color: $disabled-color;
+}
+
+.#{$ant-prefix}-cascader-picker:focus .#{$ant-prefix}-cascader-input {
+  border-color: $primary-4;
+  box-shadow: 0 0 0 2px $primary-5;
+}
+
+.#{$ant-prefix}-cascader-picker-clear {
+  background: $component-background;
+  color: $disabled-color;
+  &:hover {
+    color: $text-color-secondary;
+  }
+}
+
+.#{$ant-prefix}-cascader-picker-arrow {
+  color: $text-color-secondary;
+}
+
+.#{$ant-prefix}-cascader-menus {
+  background: $component-background;
+  box-shadow: 0 1px 6px $shadow-color;
+}
+
+.#{$ant-prefix}-cascader-menu {
+  border-right: 1px solid $border-color-split;
+}
+
+.#{$ant-prefix}-cascader-menu-item:hover {
+  background: $primary-3;
+}
+
+.#{$ant-prefix}-cascader-menu-item-disabled {
+  color: $disabled-color;
+}
+
+.#{$ant-prefix}-cascader-menu-item-active:not(.#{$ant-prefix}-cascader-menu-item-disabled) {
+  background: $background-color-base;
+  &:hover {
+    background: $background-color-base;
+  }
+}
+
+.#{$ant-prefix}-cascader-menu-item .#{$ant-prefix}-cascader-menu-item-keyword {
+  color: $red-5;
+}
+
+/******* CHECK BOX ********/
+
+.#{$ant-prefix}-checkbox-wrapper:hover .#{$ant-prefix}-checkbox-inner, .#{$ant-prefix}-checkbox:hover .#{$ant-prefix}-checkbox-inner, .#{$ant-prefix}-checkbox-input:focus + .#{$ant-prefix}-checkbox-inner {
+  border-color: $primary-color;
+}
+
+.#{$ant-prefix}-checkbox-checked:after {
+  border: 1px solid $primary-color;
+}
+
+.#{$ant-prefix}-checkbox-inner {
+  border: 1px solid $normal-color;
+  background-color: $component-background;
+  &:after {
+    border: 2px solid $component-background;
+  }
+}
+
+.#{$ant-prefix}-checkbox-indeterminate.#{$ant-prefix}-checkbox-disabled .#{$ant-prefix}-checkbox-inner:after {
+  border-color: $disabled-color;
+}
+
+.#{$ant-prefix}-checkbox-checked .#{$ant-prefix}-checkbox-inner {
+  &:after {
+    border: 2px solid $component-background;
+  }
+  background-color: $primary-color;
+  border-color: $primary-color;
+}
+
+.#{$ant-prefix}-checkbox-indeterminate .#{$ant-prefix}-checkbox-inner {
+  background-color: $primary-color;
+  border-color: $primary-color;
+}
+
+.#{$ant-prefix}-checkbox-disabled {
+  &.#{$ant-prefix}-checkbox-checked .#{$ant-prefix}-checkbox-inner:after {
+    border-color: $disabled-color;
+  }
+  .#{$ant-prefix}-checkbox-inner {
+    border-color: $normal-color !important;
+    background-color: $background-color-base;
+    &:after {
+      border-color: $background-color-base;
+    }
+  }
+  + span {
+    color: $disabled-color;
+  }
+}
+
+/******** COLLAPSE ********/
+
+.#{$ant-prefix}-collapse {
+  background-color: $background-color-base;
+  border: 1px solid $normal-color;
+  > .#{$ant-prefix}-collapse-item {
+    border-bottom: 1px solid $normal-color;
+    > .#{$ant-prefix}-collapse-header {
+      color: $heading-color;
+      .arrow {
+        color: $text-color-secondary;
+      }
+    }
+  }
+}
+
+.#{$ant-prefix}-collapse-content {
+  color: $text-color;
+  background-color: $component-background;
+}
+
+.#{$ant-prefix}-collapse-borderless {
+  background-color: $component-background;
+  > .#{$ant-prefix}-collapse-item > .#{$ant-prefix}-collapse-content {
+    border-top: 1px solid $normal-color;
+  }
+}
+
+.#{$ant-prefix}-collapse {
+  .#{$ant-prefix}-collapse-item-disabled > .#{$ant-prefix}-collapse-header {
+    color: $disabled-color;
+    background-color: $background-color-base;
+    > .arrow {
+      color: $disabled-color;
+      background-color: $background-color-base;
+    }
+  }
+  > .#{$ant-prefix}-collapse-item:not(.#{$ant-prefix}-collapse-item-disabled) > .#{$ant-prefix}-collapse-header:active {
+    background-color: $background-color-active;
+  }
+}
+
+/******** CALENDAR PICKER *********/
+
+.#{$ant-prefix}-calendar-picker:hover .#{$ant-prefix}-calendar-picker-input:not(.#{$ant-prefix}-input-disabled) {
+  border-color: $primary-color;
+}
+
+.calendar-picker-clear {
+  color: $disabled-color;
+  background: $component-background;
+}
+
+.#{$ant-prefix}-calendar-picker-clear:hover {
+  color: $text-color-secondary;
+}
+
+.#{$ant-prefix}-calendar-picker-icon {
+  color: $text-color-secondary;
+  &:after {
+    color: $text-color-secondary;
+  }
+}
+
+.#{$ant-prefix}-calendar {
+  border: 1px solid $component-background;
+  background-color: $component-background;
+}
+
+.#{$ant-prefix}-calendar-input-wrap {
+  border-bottom: 1px solid $border-color-split;
+}
+
+.#{$ant-prefix}-calendar-input {
+  background: $component-background;
+}
+
+.#{$ant-prefix}-calendar-header {
+  border-bottom: 1px solid $border-color-split;
+  a:hover {
+    color: $primary-4;
+  }
+  .#{$ant-prefix}-calendar-century-select, .#{$ant-prefix}-calendar-decade-select, .#{$ant-prefix}-calendar-year-select, .#{$ant-prefix}-calendar-month-select {
+    color: $text-color;
+  }
+  .#{$ant-prefix}-calendar-prev-century-btn, .#{$ant-prefix}-calendar-next-century-btn, .#{$ant-prefix}-calendar-prev-decade-btn, .#{$ant-prefix}-calendar-next-decade-btn, .#{$ant-prefix}-calendar-prev-month-btn, .#{$ant-prefix}-calendar-next-month-btn, .#{$ant-prefix}-calendar-prev-year-btn, .#{$ant-prefix}-calendar-next-year-btn {
+    color: $text-color-secondary;
+  }
+}
+
+.#{$ant-prefix}-calendar-date {
+  color: $text-color;
+  &:hover {
+    background: $primary-2;
+  }
+  &:active {
+    color: $component-background;
+    background: $primary-4;
+  }
+}
+
+.#{$ant-prefix}-calendar-today .#{$ant-prefix}-calendar-date {
+  border-color: $primary-color;
+  color: $primary-color;
+}
+
+.#{$ant-prefix}-calendar-last-month-cell .#{$ant-prefix}-calendar-date, .#{$ant-prefix}-calendar-next-month-btn-day .#{$ant-prefix}-calendar-date {
+  color: $disabled-color;
+}
+
+.#{$ant-prefix}-calendar-selected-day .#{$ant-prefix}-calendar-date {
+  background: $primary-color;
+  color: $component-background;
+  &:hover {
+    background: $primary-color;
+  }
+}
+
+.#{$ant-prefix}-calendar-disabled-cell {
+  .#{$ant-prefix}-calendar-date {
+    color: $calendar-date-color;
+    background: $background-color-base;
+    &:hover {
+      background: $background-color-base;
+    }
+  }
+  &.#{$ant-prefix}-calendar-today .#{$ant-prefix}-calendar-date:before {
+    border: 1px solid $calendar-date-color;
+  }
+}
+
+.#{$ant-prefix}-calendar-footer, .#{$ant-prefix}-calendar-footer-extra + .#{$ant-prefix}-calendar-footer-btn {
+  border-top: 1px solid $border-color-split;
+}
+
+.#{$ant-prefix}-calendar {
+  .#{$ant-prefix}-calendar-today-btn-disabled, .#{$ant-prefix}-calendar-clear-btn-disabled {
+    color: $disabled-color;
+  }
+  .#{$ant-prefix}-calendar-clear-btn {
+    &:after {
+      color: $disabled-color;
+    }
+    &:hover:after {
+      color: $text-color-secondary;
+    }
+  }
+  .#{$ant-prefix}-calendar-ok-btn {
+    color: $component-background;
+    background-color: $primary-color;
+    border-color: $primary-color;
+    &:active, &.active {
+      color: $component-background;
+      background-color: $primary-8;
+      border-color: $primary-8;
+    }
+    &.disabled, &[disabled], &.disabled:hover, &[disabled]:hover, &.disabled:focus, &[disabled]:focus, &.disabled:active, &[disabled]:active, &.disabled.active, &[disabled].active {
+      color: $disabled-color;
+      background-color: $background-color-base;
+      border-color: $normal-color;
+    }
+  }
+  .#{$ant-prefix}-calendar-ok-btn-disabled {
+    color: $disabled-color;
+    background-color: $background-color-base;
+    border-color: $normal-color;
+    &:hover {
+      color: $disabled-color;
+      background-color: $background-color-base;
+      border-color: $normal-color;
+    }
+  }
+}
+
+.#{$ant-prefix}-calendar-range-picker-input {
+  &::-moz-placeholder, &:-ms-input-placeholder, &::-webkit-input-placeholder {
+    color: $placeholder-color;
+  }
+}
+
+.#{$ant-prefix}-calendar-range-picker-separator {
+  color: $text-color-secondary;
+}
+
+.#{$ant-prefix}-calendar-range-left .#{$ant-prefix}-calendar-time-picker-inner {
+  border-right: 2px solid $border-color-split;
+}
+
+.#{$ant-prefix}-calendar-range-right .#{$ant-prefix}-calendar-time-picker-inner {
+  border-left: 2px solid $border-color-split;
+}
+
+.#{$ant-prefix}-calendar-range-middle {
+  color: $text-color-secondary;
+}
+
+.#{$ant-prefix}-calendar-range {
+  .#{$ant-prefix}-calendar-input, .#{$ant-prefix}-calendar-time-picker-input {
+    color: $text-color;
+    background-color: $component-background;
+    border: 1px solid $normal-color;
+  }
+  .#{$ant-prefix}-calendar-input::-moz-placeholder, .#{$ant-prefix}-calendar-time-picker-input::-moz-placeholder, .#{$ant-prefix}-calendar-input:-ms-input-placeholder, .#{$ant-prefix}-calendar-time-picker-input:-ms-input-placeholder, .#{$ant-prefix}-calendar-input::-webkit-input-placeholder, .#{$ant-prefix}-calendar-time-picker-input::-webkit-input-placeholder {
+    color: $placeholder-color;
+  }
+  .#{$ant-prefix}-calendar-input:hover, .#{$ant-prefix}-calendar-time-picker-input:hover {
+    border-color: $primary-4;
+  }
+  .#{$ant-prefix}-calendar-input:focus, .#{$ant-prefix}-calendar-time-picker-input:focus {
+    border-color: $primary-4;
+    box-shadow: 0 0 0 2px rgba(16, 142, 233, 0.2);
+  }
+  .#{$ant-prefix}-calendar-input-disabled, .#{$ant-prefix}-calendar-time-picker-input-disabled {
+    background-color: $background-color-base;
+    color: $disabled-color;
+  }
+  .#{$ant-prefix}-calendar-input-disabled:hover, .#{$ant-prefix}-calendar-time-picker-input-disabled:hover {
+    border-color: $calendar-disable-color;
+  }
+  .#{$ant-prefix}-calendar-in-range-cell:before {
+    background: $primary-2;
+  }
+  .#{$ant-prefix}-calendar-body, .#{$ant-prefix}-calendar-month-panel-body, .#{$ant-prefix}-calendar-year-panel-body {
+    border-top: 1px solid $border-color-split;
+  }
+  &.#{$ant-prefix}-calendar-time .#{$ant-prefix}-calendar-time-picker-combobox {
+    background-color: $component-background;
+    border-top: 1px solid $border-color-split;
+  }
+}
+
+.#{$ant-prefix}-calendar-time-picker, .#{$ant-prefix}-calendar-time-picker-inner {
+  background-color: $component-background;
+}
+
+.#{$ant-prefix}-calendar-time-picker-select {
+  border-right: 1px solid $border-color-split;
+  li:hover {
+    background: $primary-2;
+  }
+}
+
+li {
+  &.#{$ant-prefix}-calendar-time-picker-select-option-selected {
+    background: $background-color-base;
+  }
+  &.#{$ant-prefix}-calendar-time-picker-select-option-disabled {
+    color: $disabled-color;
+  }
+}
+
+.#{$ant-prefix}-calendar-time {
+  .#{$ant-prefix}-calendar-day-select {
+    color: $text-color;
+  }
+  .#{$ant-prefix}-calendar-footer .#{$ant-prefix}-calendar-time-picker-btn-disabled {
+    color: $disabled-color;
+  }
+}
+
+.#{$ant-prefix}-calendar-month-panel {
+  background: $component-background;
+}
+
+.#{$ant-prefix}-calendar-month-panel-header {
+  border-bottom: 1px solid $border-color-split;
+  a:hover {
+    color: $primary-4;
+  }
+  .#{$ant-prefix}-calendar-month-panel-century-select, .#{$ant-prefix}-calendar-month-panel-decade-select, .#{$ant-prefix}-calendar-month-panel-year-select, .#{$ant-prefix}-calendar-month-panel-month-select {
+    color: $text-color;
+  }
+  .#{$ant-prefix}-calendar-month-panel-prev-century-btn, .#{$ant-prefix}-calendar-month-panel-next-century-btn, .#{$ant-prefix}-calendar-month-panel-prev-decade-btn, .#{$ant-prefix}-calendar-month-panel-next-decade-btn, .#{$ant-prefix}-calendar-month-panel-prev-month-btn, .#{$ant-prefix}-calendar-month-panel-next-month-btn, .#{$ant-prefix}-calendar-month-panel-prev-year-btn, .#{$ant-prefix}-calendar-month-panel-next-year-btn {
+    color: $text-color-secondary;
+  }
+}
+
+.#{$ant-prefix}-calendar-month-panel-selected-cell .#{$ant-prefix}-calendar-month-panel-month {
+  background: $primary-color;
+  color: $component-background;
+  &:hover {
+    background: $primary-color;
+    color: $component-background;
+  }
+}
+
+.#{$ant-prefix}-calendar-month-panel-cell-disabled .#{$ant-prefix}-calendar-month-panel-month {
+  color: $calendar-date-color;
+  background: $background-color-base;
+  &:hover {
+    color: $calendar-date-color;
+    background: $background-color-base;
+  }
+}
+
+.#{$ant-prefix}-calendar-month-panel-month {
+  color: $text-color;
+  &:hover {
+    background: $primary-2;
+  }
+}
+
+.#{$ant-prefix}-calendar-year-panel {
+  background: $component-background;
+}
+
+.#{$ant-prefix}-calendar-year-panel-header {
+  a:hover {
+    color: $primary-4;
+  }
+  .#{$ant-prefix}-calendar-year-panel-century-select, .#{$ant-prefix}-calendar-year-panel-decade-select, .#{$ant-prefix}-calendar-year-panel-year-select, .#{$ant-prefix}-calendar-year-panel-month-select {
+    color: $text-color;
+  }
+  .#{$ant-prefix}-calendar-year-panel-prev-century-btn, .#{$ant-prefix}-calendar-year-panel-next-century-btn, .#{$ant-prefix}-calendar-year-panel-prev-decade-btn, .#{$ant-prefix}-calendar-year-panel-next-decade-btn, .#{$ant-prefix}-calendar-year-panel-prev-month-btn, .#{$ant-prefix}-calendar-year-panel-next-month-btn, .#{$ant-prefix}-calendar-year-panel-prev-year-btn, .#{$ant-prefix}-calendar-year-panel-next-year-btn {
+    color: $text-color-secondary;
+  }
+}
+
+.#{$ant-prefix}-calendar-year-panel-year {
+  color: $text-color;
+  &:hover {
+    background: $primary-2;
+  }
+}
+
+.#{$ant-prefix}-calendar-year-panel-selected-cell .#{$ant-prefix}-calendar-year-panel-year {
+  background: $primary-color;
+  color: $component-background;
+  &:hover {
+    background: $primary-color;
+    color: $component-background;
+  }
+}
+
+.#{$ant-prefix}-calendar-year-panel-last-decade-cell .#{$ant-prefix}-calendar-year-panel-year, .#{$ant-prefix}-calendar-year-panel-next-decade-cell .#{$ant-prefix}-calendar-year-panel-year {
+  color: $disabled-color;
+}
+
+.#{$ant-prefix}-calendar-decade-panel {
+  background: $component-background;
+}
+
+.#{$ant-prefix}-calendar-decade-panel-header {
+  border-bottom: 1px solid $border-color-split;
+  a:hover {
+    color: $primary-4;
+  }
+  .#{$ant-prefix}-calendar-decade-panel-century-select, .#{$ant-prefix}-calendar-decade-panel-decade-select, .#{$ant-prefix}-calendar-decade-panel-year-select, .#{$ant-prefix}-calendar-decade-panel-month-select {
+    color: $text-color;
+  }
+  .#{$ant-prefix}-calendar-decade-panel-prev-century-btn, .#{$ant-prefix}-calendar-decade-panel-next-century-btn, .#{$ant-prefix}-calendar-decade-panel-prev-decade-btn, .#{$ant-prefix}-calendar-decade-panel-next-decade-btn, .#{$ant-prefix}-calendar-decade-panel-prev-month-btn, .#{$ant-prefix}-calendar-decade-panel-next-month-btn, .#{$ant-prefix}-calendar-decade-panel-prev-year-btn, .#{$ant-prefix}-calendar-decade-panel-next-year-btn {
+    color: $text-color-secondary;
+  }
+}
+
+.#{$ant-prefix}-calendar-decade-panel-decade {
+  color: $text-color;
+  &:hover {
+    background: $primary-2;
+  }
+}
+
+.#{$ant-prefix}-calendar-decade-panel-selected-cell .#{$ant-prefix}-calendar-decade-panel-decade {
+  background: $primary-color;
+  color: $component-background;
+  &:hover {
+    background: $primary-color;
+    color: $component-background;
+  }
+}
+
+.#{$ant-prefix}-calendar-decade-panel-last-century-cell .#{$ant-prefix}-calendar-decade-panel-decade, .#{$ant-prefix}-calendar-decade-panel-next-century-cell .#{$ant-prefix}-calendar-decade-panel-decade {
+  color: $disabled-color;
+}
+
+/******* TIME PICKER ******/
+
+.#{$ant-prefix}-time-picker-panel-inner {
+  background-color: $component-background;
+}
+
+.#{$ant-prefix}-time-picker-panel-input {
+  &::-moz-placeholder, &:-ms-input-placeholder, &::-webkit-input-placeholder {
+    color: $placeholder-color;
+  }
+}
+
+.#{$ant-prefix}-time-picker-panel-input-wrap {
+  border-bottom: 1px solid $border-color-split;
+}
+
+.#{$ant-prefix}-time-picker-panel-clear-btn {
+  &:after {
+    color: $disabled-color;
+  }
+  &:hover:after {
+    color: $text-color-secondary;
+  }
+}
+
+.#{$ant-prefix}-time-picker-panel-narrow .#{$ant-prefix}-time-picker-panel-input-wrap {
+  max-width: 112px;
+}
+
+.#{$ant-prefix}-time-picker-panel-select {
+  border-left: 1px solid $border-color-split;
+  li:hover {
+    background: $primary-2;
+  }
+}
+
+li {
+  &.#{$ant-prefix}-time-picker-panel-select-option-selected {
+    background: $background-color-base;
+    font-weight: bold;
+    &:hover {
+      background: $background-color-base;
+    }
+  }
+  &.#{$ant-prefix}-time-picker-panel-select-option-disabled {
+    color: $disabled-color;
+  }
+}
+
+.#{$ant-prefix}-time-picker-panel-addon {
+  border-top: 1px solid $border-color-split;
+}
+
+.#{$ant-prefix}-time-picker-input {
+  color: $text-color;
+  background-color: $component-background;
+  border: 1px solid $normal-color;
+  &::-moz-placeholder {
+    color: $placeholder-color;
+  }
+}
+
+/********* DROPDOWN MENU *********/
+
+.#{$ant-prefix}-dropdown-menu {
+  background-color: $component-background;
+  box-shadow: 0 1px 6px $shadow-color;
+}
+
+.#{$ant-prefix}-dropdown-menu-item-group-title {
+  color: $text-color-secondary;
+}
+
+.#{$ant-prefix}-dropdown-menu-item, .#{$ant-prefix}-dropdown-menu-submenu-title, .#{$ant-prefix}-dropdown-menu-item > a, .#{$ant-prefix}-dropdown-menu-submenu-title > a {
+  color: $text-color;
+}
+
+.#{$ant-prefix}-dropdown-menu-item-selected, .#{$ant-prefix}-dropdown-menu-submenu-title-selected, .#{$ant-prefix}-dropdown-menu-item-selected > a, .#{$ant-prefix}-dropdown-menu-submenu-title-selected > a {
+  color: $primary-color;
+  background-color: $primary-2;
+}
+
+.#{$ant-prefix}-dropdown-menu-item:hover, .#{$ant-prefix}-dropdown-menu-submenu-title:hover {
+  background-color: $primary-2;
+}
+
+.#{$ant-prefix}-dropdown-menu-item-disabled, .#{$ant-prefix}-dropdown-menu-submenu-title-disabled {
+  color: $disabled-color;
+  cursor: not-allowed;
+}
+
+.#{$ant-prefix}-dropdown-menu-item-disabled:hover, .#{$ant-prefix}-dropdown-menu-submenu-title-disabled:hover {
+  color: $disabled-color;
+  background-color: $component-background;
+  cursor: not-allowed;
+}
+
+.#{$ant-prefix}-dropdown-menu-submenu-title:after {
+  color: $text-color-secondary;
+}
+
+.#{$ant-prefix}-dropdown-menu-submenu.#{$ant-prefix}-dropdown-menu-submenu-disabled .#{$ant-prefix}-dropdown-menu-submenu-title {
+  color: $disabled-color;
+  &:after {
+    color: $disabled-color;
+  }
+}
+
+.#{$ant-prefix}-dropdown-menu-dark {
+  background: $layout-header-background;
+  .#{$ant-prefix}-dropdown-menu {
+    background: $layout-header-background;
+  }
+  .#{$ant-prefix}-dropdown-menu-item, .#{$ant-prefix}-dropdown-menu-submenu-title {
+    color: $text-color-secondary-dark;
+  }
+  .#{$ant-prefix}-dropdown-menu-item {
+    > a, &:after {
+      color: $text-color-secondary-dark;
+    }
+  }
+  .#{$ant-prefix}-dropdown-menu-submenu-title:after {
+    color: $text-color-secondary-dark;
+  }
+  .#{$ant-prefix}-dropdown-menu-item {
+    > a:after {
+      color: $text-color-secondary-dark;
+    }
+    &:hover {
+      color: $component-background;
+      background: transparent;
+    }
+  }
+  .#{$ant-prefix}-dropdown-menu-submenu-title:hover, .#{$ant-prefix}-dropdown-menu-item > a:hover {
+    color: $component-background;
+    background: transparent;
+  }
+  .#{$ant-prefix}-dropdown-menu-item-selected {
+    background: $primary-color;
+    color: $component-background;
+    &:hover, > a {
+      background: $primary-color;
+      color: $component-background;
+    }
+  }
+}
+
+/******** INPUT *********/
+
+legend {
+  color: $text-color-secondary;
+  border-bottom: 1px solid $normal-color;
+}
+
+output {
+  color: $text-color;
+}
+
+.#{$ant-prefix}-form-item-required:before {
+  color: $red-6;
+}
+
+.#{$ant-prefix}-form-explain, .#{$ant-prefix}-form-extra {
+  color: $text-color-secondary;
+}
+
+.#{$ant-prefix}-input-group-wrap {
+  .#{$ant-prefix}-select-selection:hover {
+    border-color: $normal-color;
+  }
+  .#{$ant-prefix}-select-selection--single {
+    background-color: $background-color-active;
+  }
+  .#{$ant-prefix}-select-open .#{$ant-prefix}-select-selection {
+    border-color: $normal-color;
+    box-shadow: none;
+  }
+}
+
+.has-success.has-feedback:after {
+  content: '\E630';
+  color: $success-color;
+}
+
+.has-warning {
+  .#{$ant-prefix}-form-explain, .#{$ant-prefix}-form-split {
+    color: $yellow-6;
+  }
+  .#{$ant-prefix}-input {
+    border-color: $yellow-6;
+    &:hover {
+      border-color: $yellow-6;
+    }
+    &:focus {
+      border-color: $yellow-5;
+    }
+    &:not([disabled]):hover {
+      border-color: $yellow-6;
+    }
+  }
+  .#{$ant-prefix}-calendar-picker-open .#{$ant-prefix}-calendar-picker-input {
+    border-color: $yellow-5;
+  }
+  .#{$ant-prefix}-input-prefix {
+    color: $yellow-6;
+  }
+  .#{$ant-prefix}-input-group-addon {
+    color: $yellow-6;
+    border-color: $yellow-6;
+    background-color: $component-background;
+  }
+  .has-feedback, &.has-feedback:after {
+    color: $yellow-6;
+  }
+  .#{$ant-prefix}-select-selection {
+    border-color: $yellow-6;
+  }
+  .#{$ant-prefix}-select-open .#{$ant-prefix}-select-selection, .#{$ant-prefix}-select-focused .#{$ant-prefix}-select-selection {
+    border-color: $yellow-5;
+  }
+  .#{$ant-prefix}-calendar-picker-icon:after, .#{$ant-prefix}-time-picker-icon:after, .#{$ant-prefix}-picker-icon:after, .#{$ant-prefix}-select-arrow, .#{$ant-prefix}-cascader-picker-arrow {
+    color: $yellow-6;
+  }
+  .#{$ant-prefix}-input-number, .#{$ant-prefix}-time-picker-input {
+    border-color: $yellow-6;
+  }
+  .#{$ant-prefix}-input-number-focused, .#{$ant-prefix}-time-picker-input-focused, .#{$ant-prefix}-input-number:focus, .#{$ant-prefix}-time-picker-input:focus {
+    border-color: $yellow-5;
+  }
+  .#{$ant-prefix}-input-number:not([disabled]):hover, .#{$ant-prefix}-time-picker-input:not([disabled]):hover {
+    border-color: $yellow-6;
+  }
+  .#{$ant-prefix}-cascader-picker:focus .#{$ant-prefix}-cascader-input {
+    border-color: $yellow-5;
+  }
+}
+
+.has-error {
+  .#{$ant-prefix}-form-explain, .#{$ant-prefix}-form-split {
+    color: $red-6;
+  }
+  .#{$ant-prefix}-input {
+    border-color: $red-6;
+    &:hover {
+      border-color: $red-6;
+    }
+    &:focus {
+      border-color: $red-5;
+    }
+    &:not([disabled]):hover {
+      border-color: $red-6;
+    }
+  }
+  .#{$ant-prefix}-calendar-picker-open .#{$ant-prefix}-calendar-picker-input {
+    border-color: $red-5;
+  }
+  .#{$ant-prefix}-input-prefix {
+    color: $red-6;
+  }
+  .#{$ant-prefix}-input-group-addon {
+    color: $red-6;
+    border-color: $red-6;
+    background-color: $component-background;
+  }
+  .has-feedback, &.has-feedback:after {
+    color: $red-6;
+  }
+  .#{$ant-prefix}-select-selection {
+    border-color: $red-6;
+  }
+  .#{$ant-prefix}-select-open .#{$ant-prefix}-select-selection, .#{$ant-prefix}-select-focused .#{$ant-prefix}-select-selection {
+    border-color: $red-5;
+  }
+  .#{$ant-prefix}-calendar-picker-icon:after, .#{$ant-prefix}-time-picker-icon:after, .#{$ant-prefix}-picker-icon:after, .#{$ant-prefix}-select-arrow, .#{$ant-prefix}-cascader-picker-arrow {
+    color: $red-6;
+  }
+  .#{$ant-prefix}-input-number, .#{$ant-prefix}-time-picker-input {
+    border-color: $red-6;
+  }
+  .#{$ant-prefix}-input-number-focused, .#{$ant-prefix}-time-picker-input-focused, .#{$ant-prefix}-input-number:focus, .#{$ant-prefix}-time-picker-input:focus {
+    border-color: $red-5;
+  }
+  .#{$ant-prefix}-input-number:not([disabled]):hover, .#{$ant-prefix}-time-picker-input:not([disabled]):hover {
+    border-color: $red-6;
+  }
+  .#{$ant-prefix}-mention-wrapper {
+    .#{$ant-prefix}-mention-editor {
+      border-color: $red-6;
+      &:not([disabled]):hover {
+        border-color: $red-6;
+      }
+    }
+    &.#{$ant-prefix}-mention-active:not([disabled]) .#{$ant-prefix}-mention-editor, .#{$ant-prefix}-mention-editor:not([disabled]):focus {
+      border-color: $red-5;
+    }
+  }
+  .#{$ant-prefix}-cascader-picker:focus .#{$ant-prefix}-cascader-input {
+    border-color: $red-5;
+  }
+}
+
+.is-validating.has-feedback:after {
+  color: $primary-color;
+}
+
+.#{$ant-prefix}-input-number {
+  color: $text-color;
+  background-color: $component-background;
+  border: 1px solid $normal-color;
+  &::-moz-placeholder, &:-ms-input-placeholder, &::-webkit-input-placeholder {
+    color: $placeholder-color;
+  }
+  &:hover {
+    border-color: $primary-4;
+  }
+  &:focus {
+    border-color: $primary-4;
+  }
+}
+
+.#{$ant-prefix}-input-number-disabled {
+  background-color: $background-color-base;
+  color: $disabled-color;
+  &:hover {
+    border-color: $calendar-disable-color;
+  }
+}
+
+.#{$ant-prefix}-input-number-handler {
+  color: $text-color-secondary;
+  &:hover {
+    .#{$ant-prefix}-input-number-handler-up-inner, .#{$ant-prefix}-input-number-handler-down-inner {
+      color: $primary-4;
+    }
+  }
+}
+
+.#{$ant-prefix}-input-number-handler-up-inner, .#{$ant-prefix}-input-number-handler-down-inner {
+  color: $text-color-secondary;
+}
+
+.#{$ant-prefix}-input-number:hover {
+  border-color: $primary-4;
+}
+
+.#{$ant-prefix}-input-number-focused {
+  border-color: $primary-4;
+}
+
+.#{$ant-prefix}-input-number-disabled {
+  background-color: $background-color-base;
+  color: $disabled-color;
+  &:hover {
+    border-color: $calendar-disable-color;
+  }
+}
+
+.#{$ant-prefix}-input-number-input {
+  &::-moz-placeholder, &:-ms-input-placeholder, &::-webkit-input-placeholder {
+    color: $placeholder-color;
+  }
+  &[disabled] {
+    background-color: $background-color-base;
+    &:hover {
+      border-color: $calendar-disable-color;
+    }
+  }
+}
+
+.#{$ant-prefix}-input-number-handler-wrap {
+  border-left: 1px solid $normal-color;
+  background: $component-background;
+  z-index: 2;
+}
+
+
+/******* LAYOUT *******/
+
+.#{$ant-prefix}-layout {
+  background: $layout-body-background;
+}
+
+.#{$ant-prefix}-layout-header {
+  background: $layout-header-background;
+}
+
+.#{$ant-prefix}-layout-footer {
+  background: $layout-body-background;
+  color: $text-color;
+}
+
+.#{$ant-prefix}-layout-sider-trigger {
+  color: $component-background;
+  background: $layout-header-background;
+}
+
+
+/****** MENTION *****/
+
+.#{$ant-prefix}-mention-wrapper {
+  .#{$ant-prefix}-mention-editor {
+    background-color: $component-background;
+    border: 1px solid $normal-color;
+    &::-moz-placeholder, &:-ms-input-placeholder, &::-webkit-input-placeholder {
+      color: $placeholder-color;
+    }
+    &:hover {
+      border-color: $primary-4;
+    }
+    &:focus {
+      border-color: $primary-4;
+    }
+  }
+  .#{$ant-prefix}-mention-editor-disabled {
+    background-color: $background-color-base;
+    color: $disabled-color;
+    &:hover {
+      border-color: $calendar-disable-color;
+    }
+  }
+  &.#{$ant-prefix}-mention-active:not(.disabled) .#{$ant-prefix}-mention-editor {
+    border-color: $primary-4;
+  }
+  &.disabled .#{$ant-prefix}-mention-editor {
+    background-color: $background-color-base;
+    color: $disabled-color;
+    &:hover {
+      border-color: $calendar-disable-color;
+    }
+  }
+  .public-DraftEditorPlaceholder-root .public-DraftEditorPlaceholder-inner {
+    color: $placeholder-color;
+  }
+}
+
+.#{$ant-prefix}-mention-dropdown {
+  background-color: $component-background;
+  box-shadow: 0 1px 6px $shadow-color;
+}
+
+.#{$ant-prefix}-mention-dropdown-notfound.#{$ant-prefix}-mention-dropdown-item {
+  color: $disabled-color;
+  .#{$ant-prefix}icon-loading {
+    color: $primary-color;
+  }
+}
+
+.#{$ant-prefix}-mention-dropdown-item {
+  color: $text-color;
+  &:hover, &.focus {
+    background-color: $primary-2;
+  }
+}
+
+.#{$ant-prefix}-mention-dropdown-item-active {
+  background-color: $primary-2;
+}
+
+.#{$ant-prefix}-mention-dropdown-item-disabled {
+  color: $disabled-color;
+  &:hover {
+    color: $disabled-color;
+    background-color: $component-background;
+  }
+}
+
+.#{$ant-prefix}-mention-dropdown-item-selected {
+  background-color: $background-color-base;
+  color: $text-color;
+  &:hover {
+    background-color: $background-color-base;
+    color: $text-color;
+  }
+}
+
+.#{$ant-prefix}-mention-dropdown-item-divider {
+  background-color: $border-color-split;
+}
+
+/****** MENU ******/
+
+.#{$ant-prefix}-menu {
+  box-shadow: 0 1px 6px $shadow-color;
+  color: $text-color;
+}
+
+.#{$ant-prefix}-menu-item-group-title {
+  color: $text-color-secondary;
+}
+
+.#{$ant-prefix}-menu-item:active, .#{$ant-prefix}-menu-submenu-title:active {
+  background: $primary-2;
+}
+
+.#{$ant-prefix}-menu-item > a {
+  color: $text-color;
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+.#{$ant-prefix}-menu-item-divider {
+  background-color: $border-color-split;
+}
+
+.#{$ant-prefix}-menu-item:hover, .#{$ant-prefix}-menu-item-active, .#{$ant-prefix}-menu:not(.#{$ant-prefix}-menu-inline) .#{$ant-prefix}-menu-submenu-open, .#{$ant-prefix}-menu-submenu-active, .#{$ant-prefix}-menu-submenu-title:hover {
+  color: $primary-color;
+}
+
+.#{$ant-prefix}-menu-item-selected {
+  color: $primary-color;
+  > a {
+    color: $primary-color;
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}
+
+.#{$ant-prefix}-menu:not(.#{$ant-prefix}-menu-horizontal) .#{$ant-prefix}-menu-item-selected {
+  background-color: $primary-2;
+}
+
+.#{$ant-prefix}-menu-inline, .#{$ant-prefix}-menu-vertical {
+  border-right: 1px solid $border-color-split;
+}
+
+.#{$ant-prefix}-menu-inline .#{$ant-prefix}-menu-item:after, .#{$ant-prefix}-menu-vertical .#{$ant-prefix}-menu-item:after {
+  border-right: 3px solid $primary-color;
+}
+
+.#{$ant-prefix}-menu > .#{$ant-prefix}-menu-item-divider {
+  background-color: $border-color-split;
+}
+
+.#{$ant-prefix}-menu-submenu > .#{$ant-prefix}-menu {
+  background-color: $component-background;
+}
+
+.#{$ant-prefix}-menu-vertical .#{$ant-prefix}-menu-submenu-selected {
+  color: $primary-color;
+  > a {
+    color: $primary-color;
+  }
+}
+
+.#{$ant-prefix}-menu-horizontal {
+  border-bottom: 1px solid $border-color-split;
+  > {
+    .#{$ant-prefix}-menu-item:hover, .#{$ant-prefix}-menu-submenu:hover, .#{$ant-prefix}-menu-item-active, .#{$ant-prefix}-menu-submenu-active, .#{$ant-prefix}-menu-item-open, .#{$ant-prefix}-menu-submenu-open, .#{$ant-prefix}-menu-item-selected, .#{$ant-prefix}-menu-submenu-selected {
+      border-bottom: 2px solid $primary-color;
+      color: $primary-color;
+    }
+    .#{$ant-prefix}-menu-item > a, .#{$ant-prefix}-menu-submenu > a {
+      color: $text-color;
+    }
+    .#{$ant-prefix}-menu-item > a:hover, .#{$ant-prefix}-menu-submenu > a:hover {
+      color: $primary-color;
+    }
+  }
+}
+
+.#{$ant-prefix}-menu-item-disabled, .#{$ant-prefix}-menu-submenu-disabled, .#{$ant-prefix}-menu-item-disabled > a, .#{$ant-prefix}-menu-submenu-disabled > a, .#{$ant-prefix}-menu-item-disabled > .#{$ant-prefix}-menu-submenu-title, .#{$ant-prefix}-menu-submenu-disabled > .#{$ant-prefix}-menu-submenu-title {
+  color: $disabled-color !important;
+}
+
+.#{$ant-prefix}-menu-dark {
+  color: $text-color-secondary-dark;
+  background: $layout-header-background;
+  .#{$ant-prefix}-menu-sub {
+    color: $text-color-secondary-dark;
+    background: $layout-header-background;
+  }
+  .#{$ant-prefix}-menu-inline.#{$ant-prefix}-menu-sub {
+    background: #333;
+  }
+  &.#{$ant-prefix}-menu-horizontal {
+    border-bottom-color: $layout-header-background;
+    > {
+      .#{$ant-prefix}-menu-item, .#{$ant-prefix}-menu-submenu {
+        border-color: $layout-header-background;
+      }
+    }
+  }
+  .#{$ant-prefix}-menu-item, .#{$ant-prefix}-menu-item-group-title {
+    color: $text-color-secondary-dark;
+  }
+  .#{$ant-prefix}-menu-item {
+    > a {
+      color: $text-color-secondary-dark;
+    }
+    &:hover {
+      background-color: transparent;
+      color: $component-background;
+    }
+  }
+  .#{$ant-prefix}-menu-item-active, .#{$ant-prefix}-menu-submenu-active, &:not(.#{$ant-prefix}-menu-inline) .#{$ant-prefix}-menu-submenu-open, .#{$ant-prefix}-menu-submenu-selected, .#{$ant-prefix}-menu-submenu-title:hover {
+    background-color: transparent;
+    color: $component-background;
+  }
+  .#{$ant-prefix}-menu-item:hover > a, .#{$ant-prefix}-menu-item-active > a, .#{$ant-prefix}-menu-submenu-active > a, &:not(.#{$ant-prefix}-menu-inline) .#{$ant-prefix}-menu-submenu-open > a, .#{$ant-prefix}-menu-submenu-selected > a, .#{$ant-prefix}-menu-submenu-title:hover > a {
+    color: $component-background;
+  }
+  .#{$ant-prefix}-menu-item-selected {
+    border-right: 0;
+    color: $component-background;
+    > a {
+      color: $component-background;
+      &:hover {
+        color: $component-background;
+      }
+    }
+  }
+}
+
+.#{$ant-prefix}-menu.#{$ant-prefix}-menu-dark .#{$ant-prefix}-menu-item-selected {
+  background-color: $primary-color;
+}
+
+
+/******* TOOLTIP *******/
+
+.#{$ant-prefix}-tooltip-inner {
+  color: $component-background;
+  background-color: $tooltip-bg;
+  box-shadow: 0 1px 6px $shadow-color;
+}
+
+/******* MESSAGE ********/
+
+.#{$ant-prefix}-message-notice-content {
+  box-shadow: 0 2px 8px $shadow-color;
+  background: $component-background;
+}
+
+.#{$ant-prefix}-message-success .#{$ant-prefix}icon {
+  color: $success-color;
+}
+
+.#{$ant-prefix}-message-error .#{$ant-prefix}icon {
+  color: $red-6;
+}
+
+.#{$ant-prefix}-message-warning .#{$ant-prefix}icon {
+  color: $yellow-6;
+}
+
+.#{$ant-prefix}-message-info .#{$ant-prefix}icon, .#{$ant-prefix}-message-loading .#{$ant-prefix}icon {
+  color: $primary-color;
+}
+
+/******** MODAL ********/
+
+.#{$ant-prefix}-modal-content {
+  background-color: $component-background;
+  box-shadow: 0 2px 8px $shadow-color;
+}
+
+.#{$ant-prefix}-modal-header {
+  background: $component-background;
+  color: $text-color;
+  border-bottom: 1px solid $border-color-split;
+}
+
+.#{$ant-prefix}-modal-mask {
+  background-color: $modal-mask-bg;
+}
+
+.#{$ant-prefix}-confirm-body {
+  .#{$ant-prefix}-confirm-title, .#{$ant-prefix}-confirm-content {
+    color: $text-color;
+  }
+}
+
+.#{$ant-prefix}-confirm-error .#{$ant-prefix}-confirm-body > .#{$ant-prefix}icon {
+  color: $red-6;
+}
+
+.#{$ant-prefix}-confirm-warning .#{$ant-prefix}-confirm-body > .#{$ant-prefix}icon, .#{$ant-prefix}-confirm-confirm .#{$ant-prefix}-confirm-body > .#{$ant-prefix}icon {
+  color: $yellow-6;
+}
+
+.#{$ant-prefix}-confirm-info .#{$ant-prefix}-confirm-body > .#{$ant-prefix}icon {
+  color: $primary-color;
+}
+
+.#{$ant-prefix}-confirm-success .#{$ant-prefix}-confirm-body > .#{$ant-prefix}icon {
+  color: $success-color;
+}
+
+/******* NOTIFICATION ********/
+
+.#{$ant-prefix}-notification-notice {
+  box-shadow: 0 2px 8px $shadow-color;
+  background: $component-background;
+}
+
+.#{$ant-prefix}-notification-notice-message {
+  color: $heading-color;
+}
+
+.#{$ant-prefix}-notification-notice-icon-success {
+  color: $success-color;
+}
+
+.#{$ant-prefix}-notification-notice-icon-info {
+  color: $primary-color;
+}
+
+.#{$ant-prefix}-notification-notice-icon-warning {
+  color: $yellow-6;
+}
+
+.#{$ant-prefix}-notification-notice-icon-error {
+  color: $red-6;
+}
+
+.#{$ant-prefix}-notification-notice-close:hover {
+  color: $layout-header-background;
+}
+
+/******** PAGINATION ********/
+
+.#{$ant-prefix}-pagination-item {
+  border: 1px solid $normal-color;
+  a {
+    color: $text-color;
+  }
+  &:focus, &:hover {
+    border-color: $primary-color;
+  }
+  &:focus a, &:hover a {
+    color: $primary-color;
+  }
+}
+
+.#{$ant-prefix}-pagination-item-active {
+  background-color: $primary-color;
+  border-color: $primary-color;
+  &:focus, &:hover {
+    background-color: $primary-4;
+    border-color: $primary-4;
+  }
+  a, &:focus a, &:hover a {
+    color: $component-background;
+  }
+}
+
+.#{$ant-prefix}-pagination-jump-prev:after, .#{$ant-prefix}-pagination-jump-next:after {
+  color: $disabled-color;
+}
+
+.#{$ant-prefix}-pagination-jump-prev:focus:after, .#{$ant-prefix}-pagination-jump-next:focus:after, .#{$ant-prefix}-pagination-jump-prev:hover:after, .#{$ant-prefix}-pagination-jump-next:hover:after, .#{$ant-prefix}-pagination-prev:hover a, .#{$ant-prefix}-pagination-next:hover a {
+  color: $primary-color;
+}
+
+.#{$ant-prefix}-pagination-prev .#{$ant-prefix}-pagination-item-link, .#{$ant-prefix}-pagination-next .#{$ant-prefix}-pagination-item-link {
+  border: 1px solid $normal-color;
+  background-color: $component-background;
+}
+
+.#{$ant-prefix}-pagination-prev:focus .#{$ant-prefix}-pagination-item-link, .#{$ant-prefix}-pagination-next:focus .#{$ant-prefix}-pagination-item-link, .#{$ant-prefix}-pagination-prev:hover .#{$ant-prefix}-pagination-item-link, .#{$ant-prefix}-pagination-next:hover .#{$ant-prefix}-pagination-item-link {
+  border-color: $primary-color;
+  color: $primary-color;
+}
+
+.#{$ant-prefix}-pagination-disabled {
+  a, &:hover a, &:focus a, .#{$ant-prefix}-pagination-item-link, &:hover .#{$ant-prefix}-pagination-item-link, &:focus .#{$ant-prefix}-pagination-item-link {
+    border-color: $normal-color;
+    color: $disabled-color;
+  }
+}
+
+.#{$ant-prefix}-pagination-options-quick-jumper {
+  input {
+    color: $text-color;
+    background-color: $component-background;
+    border: 1px solid $normal-color;
+    &::-moz-placeholder, &:-ms-input-placeholder, &::-webkit-input-placeholder {
+      color: $placeholder-color;
+    }
+    &:hover, &:focus {
+      border-color: $primary-4;
+    }
+  }
+  input-disabled {
+    background-color: $background-color-base;
+    color: $disabled-color;
+    &:hover {
+      border-color: $calendar-disable-color;
+    }
+  }
+}
+
+.#{$ant-prefix}-pagination-simple .#{$ant-prefix}-pagination-simple-pager input {
+  background-color: $component-background;
+  border: 1px solid $normal-color;
+  &:hover {
+    border-color: $primary-color;
+  }
+}
+
+/******* POPOVER *******/
+.#{$ant-prefix}-popover-inner {
+  background-color: $component-background;
+  box-shadow: 0 1px 6px $shadow-color;
+}
+
+.#{$ant-prefix}-popover-title {
+  border-bottom: 1px solid $border-color-split;
+  color: $text-color;
+}
+
+.#{$ant-prefix}-popover-inner-content {
+  color: $text-color;
+}
+
+.#{$ant-prefix}-popover-message {
+  color: $text-color;
+  > .#{$ant-prefix}icon {
+    color: $yellow-6;
+  }
+}
+
+.#{$ant-prefix}-popover-placement-left > .#{$ant-prefix}-popover-content > .#{$ant-prefix}-popover-arrow:after, .#{$ant-prefix}-popover-placement-leftTop > .#{$ant-prefix}-popover-content > .#{$ant-prefix}-popover-arrow:after, .#{$ant-prefix}-popover-placement-leftBottom > .#{$ant-prefix}-popover-content > .#{$ant-prefix}-popover-arrow:after {
+  border-left-color: $component-background;
+}
+
+/****** PROGRESS ******/
+
+.#{$ant-prefix}-progress-inner {
+  background-color: $background-color-base;
+}
+
+.#{$ant-prefix}-progress-circle-trail {
+  stroke: $background-color-base;
+}
+
+.#{$ant-prefix}-progress-circle-path {
+  stroke: $primary-color;
+}
+
+.#{$ant-prefix}-progress-bg {
+  background-color: $primary-color;
+}
+
+.#{$ant-prefix}-progress-status-active .#{$ant-prefix}-progress-bg:before {
+  background: $component-background;
+}
+
+.#{$ant-prefix}-progress-status-exception {
+  .#{$ant-prefix}-progress-bg {
+    background-color: $red-6;
+  }
+  .#{$ant-prefix}-progress-text {
+    color: $red-6;
+  }
+  .#{$ant-prefix}-progress-circle-path {
+    stroke: $red-6;
+  }
+}
+
+.#{$ant-prefix}-progress-status-success {
+  .#{$ant-prefix}-progress-bg {
+    background-color: $success-color;
+  }
+  .#{$ant-prefix}-progress-text {
+    color: $success-color;
+  }
+  .#{$ant-prefix}-progress-circle-path {
+    stroke: $success-color;
+  }
+}
+
+.#{$ant-prefix}-progress-circle {
+  .#{$ant-prefix}-progress-status-exception .#{$ant-prefix}-progress-text {
+    color: $red-6;
+  }
+  .#{$ant-prefix}-progress-status-success .#{$ant-prefix}-progress-text {
+    color: $success-color;
+  }
+}
+
+/******* RATE *******/
+
+.#{$ant-prefix}-rate-star {
+  color: $border-color-split;
+}
+
+.#{$ant-prefix}-rate-star-half .#{$ant-prefix}-rate-star-first, .#{$ant-prefix}-rate-star-full .#{$ant-prefix}-rate-star-second {
+  color: $rate-star-color;
+}
+
+.#{$ant-prefix}-rate-star-half:hover .#{$ant-prefix}-rate-star-first, .#{$ant-prefix}-rate-star-full:hover .#{$ant-prefix}-rate-star-second {
+  color: lighten( $rate-star-color, 10% );
+}
+
+/******* SLIDER *******/
+
+.#{$ant-prefix}-slider-rail {
+  background-color: $border-color-split;
+}
+
+.#{$ant-prefix}-slider-track {
+  background-color: $primary-4;
+}
+
+.#{$ant-prefix}-slider-handle {
+  border: solid 2px $primary-5;
+  background-color: $component-background;
+  &:hover {
+    border-color: $primary-4;
+  }
+}
+
+.#{$ant-prefix}-slider:hover {
+  .#{$ant-prefix}-slider-track {
+    background-color: $primary-3;
+  }
+  .#{$ant-prefix}-slider-handle {
+    border-color: $primary-4;
+  }
+}
+
+.#{$ant-prefix}-slider-mark-text {
+  color: $text-color-secondary;
+}
+
+.#{$ant-prefix}-slider-mark-text-active {
+  color: $text-color;
+}
+
+.#{$ant-prefix}-slider-dot {
+  border: 2px solid $border-color-split;
+  background-color: $component-background;
+}
+
+.#{$ant-prefix}-slider-dot-active {
+  border-color: $primary-5;
+}
+
+.#{$ant-prefix}-slider-disabled {
+  .#{$ant-prefix}-slider-handle, .#{$ant-prefix}-slider-dot {
+    border-color: $disabled-color !important;
+    background-color: $component-background;
+  }
+}
+
+/******* SPIN *******/
+
+.#{$ant-prefix}-spin {
+  color: $primary-color;
+}
+
+.#{$ant-prefix}-spin-blur:after {
+  background: $component-background;
+}
+
+/******** STEPS *******/
+
+.#{$ant-prefix}-steps {
+  .#{$ant-prefix}-steps-item {
+    &.#{$ant-prefix}-steps-status-wait {
+      .#{$ant-prefix}-steps-head-inner {
+        border-color: $disabled-color;
+        background-color: $component-background;
+        > .#{$ant-prefix}-steps-icon {
+          color: $disabled-color;
+          .#{$ant-prefix}-steps-icon-dot {
+            background: $disabled-color;
+          }
+        }
+      }
+      .#{$ant-prefix}-steps-title, .#{$ant-prefix}-steps-description {
+        color: $text-color-secondary;
+      }
+      .#{$ant-prefix}-steps-tail > i {
+        background-color: $border-color-split;
+      }
+    }
+    &.#{$ant-prefix}-steps-status-process {
+      .#{$ant-prefix}-steps-head-inner {
+        border-color: $primary-color;
+        background-color: $primary-color;
+        > .#{$ant-prefix}-steps-icon {
+          color: $component-background;
+          .#{$ant-prefix}-steps-icon-dot {
+            background: $primary-color;
+          }
+        }
+      }
+      .#{$ant-prefix}-steps-title, .#{$ant-prefix}-steps-description {
+        color: $text-color;
+      }
+      .#{$ant-prefix}-steps-tail > i {
+        background-color: $border-color-split;
+      }
+    }
+    &.#{$ant-prefix}-steps-status-finish {
+      .#{$ant-prefix}-steps-head-inner {
+        border-color: $primary-color;
+        background-color: $component-background;
+        > .#{$ant-prefix}-steps-icon {
+          color: $primary-color;
+          .#{$ant-prefix}-steps-icon-dot {
+            background: $primary-color;
+          }
+        }
+      }
+      .#{$ant-prefix}-steps-tail > i:after {
+        background: $primary-color;
+      }
+      .#{$ant-prefix}-steps-title, .#{$ant-prefix}-steps-description {
+        color: $text-color-secondary;
+      }
+    }
+    &.#{$ant-prefix}-steps-status-error {
+      .#{$ant-prefix}-steps-head-inner {
+        border-color: $red-6;
+        background-color: $component-background;
+        > .#{$ant-prefix}-steps-icon {
+          color: $red-6;
+          .#{$ant-prefix}-steps-icon-dot {
+            background: $red-6;
+          }
+        }
+      }
+      .#{$ant-prefix}-steps-title, .#{$ant-prefix}-steps-description {
+        color: $red-6;
+      }
+      .#{$ant-prefix}-steps-tail > i {
+        background-color: $border-color-split;
+      }
+    }
+    &.#{$ant-prefix}-steps-next-error .#{$ant-prefix}-steps-tail > i {
+      background-color: $red-6;
+      &:after {
+        background-color: $red-6;
+      }
+    }
+  }
+  .#{$ant-prefix}-steps-head-inner > .#{$ant-prefix}-steps-icon {
+    color: $primary-color;
+  }
+  .#{$ant-prefix}-steps-title {
+    color: $text-color;
+    background-color: $component-background;
+    > a:first-child:last-child {
+      color: $text-color;
+    }
+  }
+  .#{$ant-prefix}-steps-tail > i {
+    background: $border-color-split;
+    &:after {
+      background: $border-color-split;
+    }
+  }
+  &.#{$ant-prefix}-steps-small {
+    .#{$ant-prefix}-steps-title {
+      color: $text-color;
+    }
+    .#{$ant-prefix}-steps-description {
+      color: $text-color-secondary;
+    }
+  }
+}
+
+
+/****** SWITCH ********/
+
+.#{$ant-prefix}-switch {
+  background-color: $disabled-color;
+}
+
+.#{$ant-prefix}-switch-inner {
+  color: $component-background;
+}
+
+.#{$ant-prefix}-switch:after {
+  background-color: $component-background;
+}
+
+.#{$ant-prefix}-switch-checked {
+  background-color: $primary-color;
+}
+
+.#{$ant-prefix}-switch-disabled {
+  .#{$ant-prefix}-switch-inner {
+    color: $disabled-color;
+  }
+}
+
+/******* TABLE ********/
+
+.#{$ant-prefix}-table {
+  color: $text-color;
+}
+
+.#{$ant-prefix}-table-thead > tr > th {
+  background: $background-color-base;
+  color: $heading-color;
+  .#{$ant-prefix}icon-filter, .#{$ant-prefix}-table-filter-icon {
+    color: lighten( $heading-color, 20% );
+  }
+  .#{$ant-prefix}icon-filter:hover, .#{$ant-prefix}-table-filter-icon:hover {
+    color: $text-color;
+  }
+  .#{$ant-prefix}-table-filter-selected.#{$ant-prefix}icon-filter {
+    color: $primary-color;
+  }
+}
+
+.#{$ant-prefix}-table-tbody > tr > td {
+  border-bottom: 1px solid $border-color-split;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.#{$ant-prefix}-table-thead > tr, .#{$ant-prefix}-table-tbody > tr {
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.#{$ant-prefix}-table-thead > tr.#{$ant-prefix}-table-row-hover > td, .#{$ant-prefix}-table-tbody > tr.#{$ant-prefix}-table-row-hover > td, .#{$ant-prefix}-table-thead > tr:hover > td, .#{$ant-prefix}-table-tbody > tr:hover > td {
+  background: $primary-2;
+}
+
+.#{$ant-prefix}-table-footer {
+  background: $background-color-base;
+  &:before {
+    background: $background-color-base;
+  }
+}
+
+.#{$ant-prefix}-table.#{$ant-prefix}-table-bordered {
+  .#{$ant-prefix}-table-footer, .#{$ant-prefix}-table-title {
+    border: 1px solid $border-color-split;
+  }
+}
+
+.#{$ant-prefix}-table-thead > tr > th.#{$ant-prefix}-table-column-sort {
+  background: $background-color-active;
+}
+
+.#{$ant-prefix}-table-header {
+  background: $background-color-base;
+}
+
+.#{$ant-prefix}-table-loading .#{$ant-prefix}-table-body {
+  background: $component-background;
+}
+
+.#{$ant-prefix}-table-small {
+  border: 1px solid $border-color-split;
+  .#{$ant-prefix}-table-thead > tr > th {
+    background: $component-background;
+    border-bottom: 1px solid $border-color-split;
+  }
+  .#{$ant-prefix}-table-title {
+    border-bottom: 1px solid $border-color-split;
+    top: 0;
+  }
+  .#{$ant-prefix}-table-header {
+    background: $component-background;
+  }
+}
+
+.#{$ant-prefix}-table-column-sorter-up:hover .#{$ant-prefix}icon, .#{$ant-prefix}-table-column-sorter-down:hover .#{$ant-prefix}icon {
+  color: $text-color;
+}
+
+.#{$ant-prefix}-table-column-sorter-up.on .#{$ant-prefix}icon-caret-up, .#{$ant-prefix}-table-column-sorter-down.on .#{$ant-prefix}icon-caret-up, .#{$ant-prefix}-table-column-sorter-up.on .#{$ant-prefix}icon-caret-down, .#{$ant-prefix}-table-column-sorter-down.on .#{$ant-prefix}icon-caret-down {
+  color: $primary-color;
+}
+
+.#{$ant-prefix}-table-column-sorter {
+  .#{$ant-prefix}icon-caret-up, .#{$ant-prefix}icon-caret-down {
+    color: lighten( $heading-color, 20% );
+  }
+}
+
+.#{$ant-prefix}-table-bordered {
+  .#{$ant-prefix}-table-header > table, .#{$ant-prefix}-table-body > table, .#{$ant-prefix}-table-fixed-left table, .#{$ant-prefix}-table-fixed-right table {
+    border: 1px solid $border-color-split;
+  }
+  &.#{$ant-prefix}-table-empty .#{$ant-prefix}-table-placeholder {
+    border-left: 1px solid $border-color-split;
+    border-right: 1px solid $border-color-split;
+  }
+  .#{$ant-prefix}-table-thead > tr > th {
+    border-bottom: 1px solid $border-color-split;
+    border-right: 1px solid $border-color-split;
+  }
+  .#{$ant-prefix}-table-tbody > tr > td {
+    border-right: 1px solid $border-color-split;
+  }
+  &.#{$ant-prefix}-table-small {
+    .#{$ant-prefix}-table-title {
+      border-bottom: 1px solid $border-color-split;
+      border-right: 1px solid $border-color-split;
+    }
+    .#{$ant-prefix}-table-footer {
+      border-top: 1px solid $border-color-split;
+      border-right: 1px solid $border-color-split;
+    }
+  }
+}
+
+.#{$ant-prefix}-table-placeholder {
+  background: $component-background;
+  border-bottom: 1px solid $border-color-split;
+  color: $text-color-secondary;
+}
+
+.#{$ant-prefix}-table-filter-dropdown {
+  background: $component-background;
+  .#{$ant-prefix}-dropdown-menu .#{$ant-prefix}-dropdown-submenu-contain-selected .#{$ant-prefix}-dropdown-menu-submenu-title:after {
+    color: $primary-color;
+    text-shadow: 0 0 2px $primary-2;
+  }
+}
+
+.#{$ant-prefix}-table-filter-dropdown-btns {
+  overflow: hidden;
+  border-top: 1px solid $border-color-split;
+}
+
+.#{$ant-prefix}-table-filter-dropdown-link {
+  color: $primary-color;
+  &:hover {
+    color: $primary-4;
+  }
+  &:active {
+    color: $primary-8;
+  }
+}
+
+.#{$ant-prefix}-table-selection .#{$ant-prefix}icon-down {
+  color: lighten( $heading-color, 20% );
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.#{$ant-prefix}-table-selection-menu {
+  background: $component-background;
+  box-shadow: 0 1px 6px $shadow-color;
+  .#{$ant-prefix}-action-down {
+    color: lighten( $heading-color, 20% );
+  }
+}
+
+.#{$ant-prefix}-table-row-expand-icon {
+  border: 1px solid $border-color-split;
+  background: $component-background;
+}
+
+.#{$ant-prefix}-table-fixed-header > .#{$ant-prefix}-table-content > .#{$ant-prefix}-table-scroll > .#{$ant-prefix}-table-body, .#{$ant-prefix}-table-fixed-left table, .#{$ant-prefix}-table-fixed-right table {
+  background: $component-background;
+}
+
+/******** TABS *******/
+
+.#{$ant-prefix}-tabs.#{$ant-prefix}-tabs-card > .#{$ant-prefix}-tabs-bar {
+  .#{$ant-prefix}-tabs-tab {
+    border: 1px solid $normal-color;
+  }
+  .#{$ant-prefix}-tabs-tab-active {
+    background: $component-background;
+    border-color: $normal-color;
+    color: $primary-color;
+  }
+  .#{$ant-prefix}-tabs-tab .#{$ant-prefix}icon-close {
+    color: $text-color-secondary;
+    &:hover {
+      color: $heading-color;
+    }
+  }
+}
+
+.#{$ant-prefix}-tabs-extra-content .#{$ant-prefix}-tabs-new-tab {
+  color: $text-color-secondary;
+  &:hover {
+    color: $primary-color;
+    border-color: $primary-color;
+  }
+}
+
+.#{$ant-prefix}-tabs-vertical.#{$ant-prefix}-tabs-card > .#{$ant-prefix}-tabs-bar .#{$ant-prefix}-tabs-tab {
+  border-bottom: 1px solid $normal-color;
+}
+
+.#{$ant-prefix}-tabs {
+  color: $text-color;
+}
+
+.#{$ant-prefix}-tabs-ink-bar {
+  background-color: $primary-color;
+}
+
+.#{$ant-prefix}-tabs-bar {
+  border-bottom: 1px solid $normal-color;
+}
+
+.#{$ant-prefix}-tabs-tab-prev, .#{$ant-prefix}-tabs-tab-next {
+  color: $text-color-secondary;
+}
+
+.#{$ant-prefix}-tabs-tab-prev:hover, .#{$ant-prefix}-tabs-tab-next:hover {
+  color: $text-color;
+}
+
+.#{$ant-prefix}-tabs-tab-btn-disabled {
+  color: $disabled-color;
+  &:hover {
+    color: $disabled-color;
+  }
+}
+
+.#{$ant-prefix}-tabs-nav {
+  .#{$ant-prefix}-tabs-tab-disabled {
+    color: $disabled-color;
+  }
+  .#{$ant-prefix}-tabs-tab {
+    &:hover {
+      color: $primary-4;
+    }
+    &:active {
+      color: $primary-8;
+    }
+  }
+  .#{$ant-prefix}-tabs-tab-active {
+    color: $primary-color;
+  }
+}
+
+.#{$ant-prefix}-tabs-vertical {
+  &.#{$ant-prefix}-tabs-left > .#{$ant-prefix}-tabs-content {
+    border-left: 1px solid $border-color-split;
+  }
+  &.#{$ant-prefix}-tabs-right > {
+    .#{$ant-prefix}-tabs-bar {
+      border-left: 1px solid $border-color-split;
+    }
+    .#{$ant-prefix}-tabs-content {
+      border-right: 1px solid $border-color-split;
+    }
+  }
+}
+
+/******* TAG *******/
+
+.#{$ant-prefix}-tag {
+  border: 1px solid $border-color-split;
+  background: $tag-default-bg;
+}
+
+.#{$ant-prefix}-tag-has-color {
+  color: $component-background;
+  a, .#{$ant-prefix}icon-cross {
+    color: $component-background;
+    &:hover {
+      color: $component-background;
+    }
+  }
+}
+
+.#{$ant-prefix}-tag-checkable {
+  &:not(.#{$ant-prefix}-tag-checkable-checked):hover {
+    color: $primary-color;
+  }
+  &:active {
+    color: $component-background;
+  }
+}
+
+.#{$ant-prefix}-tag-checkable-checked {
+  color: $component-background;
+  background-color: $primary-color;
+}
+
+.#{$ant-prefix}-tag-checkable:active {
+  background-color: $primary-8;
+}
+
+/******* TIMELINE ******/
+
+.#{$ant-prefix}-timeline-item-tail {
+  border-left: 2px solid $border-color-split;
+}
+
+.#{$ant-prefix}-timeline-item-head {
+  background-color: $component-background;
+}
+
+.#{$ant-prefix}-timeline-item-head-blue {
+  border-color: $primary-color;
+  color: $primary-color;
+}
+
+.#{$ant-prefix}-timeline-item-head-red {
+  border-color: $red-6;
+  color: $red-6;
+}
+
+.#{$ant-prefix}-timeline-item-head-green {
+  border-color: $success-color;
+  color: $success-color;
+}
+
+.#{$ant-prefix}-timeline-item-last .#{$ant-prefix}-timeline-item-tail {
+  border-left: 2px dotted $border-color-split;
+}
+
+/********* TRANSFER *******/
+
+.#{$ant-prefix}-transfer-list {
+  border: 1px solid $normal-color;
+}
+
+.#{$ant-prefix}-transfer-list-search-action {
+  color: $disabled-color;
+  .#{$ant-prefix}icon {
+    color: $disabled-color;
+    &:hover {
+      color: $text-color-secondary;
+    }
+  }
+}
+
+.#{$ant-prefix}-transfer-list-header {
+  color: $text-color;
+}
+
+.#{$ant-prefix}-transfer-list-content-item:not(.#{$ant-prefix}-transfer-list-content-item-disabled):hover {
+  background-color: $primary-2;
+}
+
+.#{$ant-prefix}-transfer-list-content-item-disabled, .#{$ant-prefix}-transfer-list-body-not-found {
+  color: $disabled-color;
+}
+
+.#{$ant-prefix}-transfer-list-footer {
+  border-top: 1px solid $border-color-split;
+}
+
+/******* TREE *******/
+
+.#{$ant-prefix}-select-tree-checkbox-wrapper:hover .#{$ant-prefix}-select-tree-checkbox-inner, .#{$ant-prefix}-select-tree-checkbox:hover .#{$ant-prefix}-select-tree-checkbox-inner, .#{$ant-prefix}-select-tree-checkbox-input:focus + .#{$ant-prefix}-select-tree-checkbox-inner {
+  border-color: $primary-color;
+}
+
+.#{$ant-prefix}-select-tree-checkbox-checked:after {
+  border: 1px solid $primary-color;
+}
+
+.#{$ant-prefix}-select-tree-checkbox-inner {
+  border: 1px solid $normal-color;
+  background-color: $component-background;
+  &:after {
+    border: 2px solid $component-background;
+  }
+}
+
+.#{$ant-prefix}-select-tree-checkbox-indeterminate.#{$ant-prefix}-select-tree-checkbox-disabled .#{$ant-prefix}-select-tree-checkbox-inner:after {
+  border-color: $disabled-color;
+}
+
+.#{$ant-prefix}-select-tree-checkbox-checked .#{$ant-prefix}-select-tree-checkbox-inner {
+  &:after {
+    border: 2px solid $component-background;
+  }
+  background-color: $primary-color;
+  border-color: $primary-color;
+}
+
+.#{$ant-prefix}-select-tree-checkbox-indeterminate .#{$ant-prefix}-select-tree-checkbox-inner {
+  background-color: $primary-color;
+  border-color: $primary-color;
+}
+
+.#{$ant-prefix}-select-tree-checkbox-disabled .#{$ant-prefix}-select-tree-checkbox-inner {
+  border-color: $normal-color !important;
+  background-color: $background-color-base;
+  &:after {
+    border-color: $background-color-base;
+  }
+}
+
+.#{$ant-prefix}-select-tree li {
+  .#{$ant-prefix}-select-tree-node-content-wrapper {
+    &:hover {
+      background-color: $primary-2;
+    }
+    &.#{$ant-prefix}-select-tree-node-selected {
+      background-color: $primary-2;
+    }
+  }
+  span.#{$ant-prefix}-select-tree-icon_loading:after {
+    color: $primary-color;
+  }
+}
+
+li.#{$ant-prefix}-select-tree-treenode-disabled > {
+  span {
+    color: $disabled-color;
+  }
+  .#{$ant-prefix}-select-tree-node-content-wrapper {
+    color: $disabled-color;
+    span {
+      color: $disabled-color;
+    }
+  }
+  span.#{$ant-prefix}-select-tree-switcher {
+    color: $disabled-color;
+  }
+}
+
+.#{$ant-prefix}-select-tree-dropdown {
+  .#{$ant-prefix}-select-dropdown-search .#{$ant-prefix}-select-search__field {
+    border: 1px solid $normal-color;
+  }
+  .#{$ant-prefix}-select-not-found {
+    color: $disabled-color;
+  }
+}
+
+/******* TREE CHECK BOX ********/
+
+.#{$ant-prefix}-tree-checkbox-wrapper:hover .#{$ant-prefix}-tree-checkbox-inner, .#{$ant-prefix}-tree-checkbox:hover .#{$ant-prefix}-tree-checkbox-inner, .#{$ant-prefix}-tree-checkbox-input:focus + .#{$ant-prefix}-tree-checkbox-inner {
+  border-color: $primary-color;
+}
+
+.#{$ant-prefix}-tree-checkbox-checked:after {
+  border: 1px solid $primary-color;
+}
+
+.#{$ant-prefix}-tree-checkbox-inner {
+  border: 1px solid $normal-color;
+  background-color: $component-background;
+  &:after {
+    border: 2px solid $component-background;
+  }
+}
+
+.#{$ant-prefix}-tree-checkbox-checked .#{$ant-prefix}-tree-checkbox-inner {
+  &:after {
+    border: 2px solid $component-background;
+  }
+  background-color: $primary-color;
+  border-color: $primary-color;
+}
+
+.#{$ant-prefix}-tree-checkbox-indeterminate .#{$ant-prefix}-tree-checkbox-inner {
+  background-color: $primary-color;
+  border-color: $primary-color;
+}
+
+.#{$ant-prefix}-tree-checkbox-disabled {
+  .#{$ant-prefix}-tree-checkbox-inner {
+    border-color: $normal-color !important;
+    background-color: $background-color-base;
+    &:after {
+      border-color: $background-color-base;
+    }
+  }
+  + span {
+    color: $disabled-color;
+  }
+}
+
+.#{$ant-prefix}-tree li {
+  &.drag-over > span[draggable] {
+    background-color: $primary-color;
+    color: $component-background;
+  }
+  &.drag-over-gap-top > span[draggable] {
+    border-top-color: $primary-color;
+  }
+  &.drag-over-gap-bottom > span[draggable] {
+    border-bottom-color: $primary-color;
+  }
+  &.filter-node > span {
+    color: $red-6 !important;
+  }
+  .#{$ant-prefix}-tree-node-content-wrapper {
+    color: $text-color;
+    &:hover {
+      background-color: $primary-2;
+    }
+    &.#{$ant-prefix}-tree-node-selected {
+      background-color: $primary-2;
+    }
+  }
+  span {
+    &.#{$ant-prefix}-tree-checkbox {
+      vertical-align: middle;
+    }
+    &.#{$ant-prefix}-tree-icon_loading {
+      background: $component-background;
+      &:after {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+li.#{$ant-prefix}-tree-treenode-disabled > {
+  span {
+    color: $disabled-color;
+  }
+  .#{$ant-prefix}-tree-node-content-wrapper {
+    color: $disabled-color;
+    span {
+      color: $disabled-color;
+    }
+  }
+  span.#{$ant-prefix}-tree-switcher {
+    color: $disabled-color;
+  }
+}
+
+.#{$ant-prefix}-tree.#{$ant-prefix}-tree-show-line li {
+  span.#{$ant-prefix}-tree-switcher {
+    background: $component-background;
+    color: $text-color;
+    &.#{$ant-prefix}-tree-switcher_open, &.#{$ant-prefix}-tree-switcher_close {
+      color: $text-color-secondary;
+    }
+  }
+  &:not(:last-child):before {
+    border-left: 1px solid $normal-color;
+  }
+}
+
+/******* UPLOAD *******/
+
+.#{$ant-prefix}-upload {
+  &.#{$ant-prefix}-upload-select-picture-card {
+    border: 1px dashed $normal-color;
+    &:hover {
+      border-color: $primary-color;
+    }
+  }
+  &.#{$ant-prefix}-upload-drag {
+    border: 1px dashed $normal-color;
+    &.#{$ant-prefix}-upload-drag-hover:not(.#{$ant-prefix}-upload-disabled) {
+      border: 2px dashed $primary-4;
+    }
+    &:not(.#{$ant-prefix}-upload-disabled):hover {
+      border-color: $primary-4;
+    }
+    p {
+      &.#{$ant-prefix}-upload-drag-icon .#{$ant-prefix}icon {
+        color: $primary-4;
+      }
+      &.#{$ant-prefix}-upload-hint {
+        color: $text-color-secondary;
+      }
+    }
+    .#{$ant-prefix}icon-plus {
+      color: $disabled-color;
+      &:hover {
+        color: $text-color-secondary;
+      }
+    }
+    &:hover .#{$ant-prefix}icon-plus {
+      color: $text-color-secondary;
+    }
+  }
+}
+
+.#{$ant-prefix}-upload-list-item-info {
+  .#{$ant-prefix}icon-loading, .#{$ant-prefix}icon-paper-clip {
+    color: $text-color-secondary;
+  }
+}
+
+.#{$ant-prefix}-upload-list-item {
+  .#{$ant-prefix}icon-cross {
+    color: $text-color-secondary;
+    &:hover {
+      color: $text-color;
+    }
+  }
+  &:hover .#{$ant-prefix}-upload-list-item-info {
+    background-color: $primary-2;
+  }
+}
+
+.#{$ant-prefix}-upload-list-item-error {
+  color: $red-6;
+  .#{$ant-prefix}icon-paper-clip, .#{$ant-prefix}-upload-list-item-name {
+    color: $red-6;
+  }
+  .#{$ant-prefix}icon-cross {
+    color: $red-6 !important;
+  }
+}
+
+.#{$ant-prefix}-upload-list-picture .#{$ant-prefix}-upload-list-item, .#{$ant-prefix}-upload-list-picture-card .#{$ant-prefix}-upload-list-item {
+  border: 1px solid $normal-color;
+}
+
+.#{$ant-prefix}-upload-list-picture .#{$ant-prefix}-upload-list-item-error, .#{$ant-prefix}-upload-list-picture-card .#{$ant-prefix}-upload-list-item-error {
+  border-color: $red-6;
+}
+
+.#{$ant-prefix}-upload-list-picture .#{$ant-prefix}-upload-list-item-thumbnail.#{$ant-prefix}icon:before {
+  color: $text-color-secondary;
+}
+
+.#{$ant-prefix}-upload-list-picture-card {
+  .#{$ant-prefix}-upload-list-item-thumbnail.#{$ant-prefix}icon:before {
+    color: $text-color-secondary;
+  }
+  .#{$ant-prefix}-upload-list-item-actions {
+    .#{$ant-prefix}icon-eye-o:hover, .#{$ant-prefix}icon-delete:hover {
+      color: $component-background;
+    }
+  }
+  .#{$ant-prefix}-upload-list-item-uploading-text {
+    color: $text-color-secondary;
+  }
+}
+
+.#{$ant-prefix}-upload-list .#{$ant-prefix}-upload-success-icon {
+  color: $success-color;
+}

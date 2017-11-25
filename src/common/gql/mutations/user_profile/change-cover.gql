@@ -1,0 +1,20 @@
+#import "../../fragments/user_profile.gql"
+
+mutation userProfileChangeCover(
+  $user_id: Int!
+  $cover_offset: String
+  $cover_cropped: String
+  $cover: String
+) {
+  userProfileChangeCover(
+    user_id: $user_id
+    cover_offset: $cover_offset
+    cover_cropped: $cover_cropped
+    cover: $cover
+  ){
+    ok
+    profile{
+      ...UserProfile
+    }
+  }
+}

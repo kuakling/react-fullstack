@@ -1,0 +1,23 @@
+fragment UserProfile on UserProfile {
+  firstname
+  lastname
+  avatar_offset
+  avatar_cropped
+  avatar_cropped_exists
+  avatar
+  avatar_exists
+  cover_offset
+  cover_cropped
+  cover_cropped_exists
+  cover
+  cover_exists
+  bio
+  avatar_files {
+    file
+    isCurrent
+  }
+  cover_files {
+    file
+    isCurrent
+  }
+} 

@@ -1,0 +1,278 @@
+$blue-base    : #108ee9;
+$blue-light-1 : lighten( $blue-base, 10% );
+$blue-light-2 : lighten( $blue-base, 20% );
+$blue-light-3 : lighten( $blue-base, 30% );
+$blue-light-4 : lighten( $blue-base, 40% );
+$blue-light-5 : lighten( $blue-base, 50% );
+$blue-dark-1  : darken( $blue-base, 10% );
+$blue-dark-2  : darken( $blue-base, 20% );
+$blue-dark-3  : darken( $blue-base, 30% );
+$blue-dark-4  : darken( $blue-base, 40% );
+$blue-dark-5  : darken( $blue-base, 50% );
+
+$green-base  : #00a854;
+$green-light-1 : lighten( $green-base, 10% );
+$green-light-2 : lighten( $green-base, 20% );
+$green-light-3 : lighten( $green-base, 30% );
+$green-light-4 : lighten( $green-base, 40% );
+$green-light-5 : lighten( $green-base, 50% );
+$green-dark-1  : darken( $green-base, 10% );
+$green-dark-2  : darken( $green-base, 20% );
+$green-dark-3  : darken( $green-base, 30% );
+$green-dark-4  : darken( $green-base, 40% );
+$green-dark-5  : darken( $green-base, 50% );
+
+$red-base    : #f04134;
+$red-light-1 : lighten( $red-base, 10% );
+$red-light-2 : lighten( $red-base, 20% );
+$red-light-3 : lighten( $red-base, 30% );
+$red-light-4 : lighten( $red-base, 40% );
+$red-light-5 : lighten( $red-base, 50% );
+$red-dark-1  : darken( $red-base, 10% );
+$red-dark-2  : darken( $red-base, 20% );
+$red-dark-3  : darken( $red-base, 30% );
+$red-dark-4  : darken( $red-base, 40% );
+$red-dark-5  : darken( $red-base, 50% );
+
+$yellow-base : #ffbf00;
+$yellow-light-1 : lighten( $yellow-base, 10% );
+$yellow-light-2 : lighten( $yellow-base, 20% );
+$yellow-light-3 : lighten( $yellow-base, 30% );
+$yellow-light-4 : lighten( $yellow-base, 40% );
+$yellow-light-5 : lighten( $yellow-base, 50% );
+$yellow-dark-1  : darken( $yellow-base, 10% );
+$yellow-dark-2  : darken( $yellow-base, 20% );
+$yellow-dark-3  : darken( $yellow-base, 30% );
+$yellow-dark-4  : darken( $yellow-base, 40% );
+$yellow-dark-5  : darken( $yellow-base, 50% );
+
+$purple : #7265e6;
+$cyan   : #00a2ae;
+$pink   : #f5317f;
+$orange : #f56a00;
+
+
+
+$ant-prefix             : ant;
+
+// -------- Colors -----------
+$primary-color          : $blue-base;
+$info-color             : $blue-base;
+$success-color          : $green-base;
+$error-color            : $red-base;
+$highlight-color        : $red-base;
+$warning-color          : $yellow-base;
+$normal-color           : #d9d9d9;
+
+$primary-1              : lighten( $primary-color, 50% );
+$primary-2              : lighten( $primary-color, 40% );
+$primary-3              : lighten( $primary-color, 30% );
+$primary-4              : lighten( $primary-color, 20% );
+$primary-5              : lighten( $primary-color, 10% );
+$primary-6              : $primary-color;
+$primary-7              : darken( $primary-color, 10% );
+$primary-8              : darken( $primary-color, 20% );
+$primary-9              : darken( $primary-color, 30% );
+$primary-10             : darken( $primary-color, 40% );
+
+$green-1              : $green-light-5;
+$green-2              : $green-light-4;
+$green-3              : $green-light-3;
+$green-4              : $green-light-2;
+$green-5              : $green-light-1;
+$green-6              : $green-base;
+$green-7              : $green-dark-1;
+$green-8              : $green-dark-2;
+$green-9              : $green-dark-3;
+$green-10             : $green-dark-4;
+
+$yellow-1              : $yellow-light-5;
+$yellow-2              : $yellow-light-4;
+$yellow-3              : $yellow-light-3;
+$yellow-4              : $yellow-light-2;
+$yellow-5              : $yellow-light-1;
+$yellow-6              : $yellow-base;
+$yellow-7              : $yellow-dark-1;
+$yellow-8              : $yellow-dark-2;
+$yellow-9              : $yellow-dark-3;
+$yellow-10             : $yellow-dark-4;
+
+$red-1              : $red-light-5;
+$red-2              : $red-light-4;
+$red-3              : $red-light-3;
+$red-4              : $red-light-2;
+$red-5              : $red-light-1;
+$red-6              : $red-base;
+$red-7              : $red-dark-1;
+$red-8              : $red-dark-2;
+$red-9              : $red-dark-3;
+$red-10             : $red-dark-4;
+
+// Background color for `<body>`
+$body-background        : #fff;
+// Base background color for most components
+$component-background   : #fff;
+$heading-color          : rgba(0, 0, 0, 0.85);
+$text-color             : rgba(0, 0, 0, 0.65);
+$text-color-secondary   : rgba(0, 0, 0, 0.43);
+$heading-color-dark     : rgba(255, 255, 255, 0.97);
+$text-color-dark        : rgba(255, 255, 255, 0.91);
+$text-color-secondary-dark: rgba(255, 255, 255, 0.67);
+
+// The background colors for active and hover states for things like
+// list items or table cells.
+$item-active-bg         : $primary-1;
+$item-hover-bg          : $primary-1;
+
+$placeholder-color: #bfbfbf;
+
+
+// LINK
+$link-color             : $primary-color;
+$link-hover-color       : $primary-5;
+$link-active-color      : $primary-7;
+$link-decoration        : none;
+$link-hover-decoration  : none;
+
+// Border color
+$border-color-base      : #d9d9d9;        // base border outline a component
+$border-color-split     : #e9e9e9;        // split border inside a component
+
+// Outline
+$outline-color          : $primary-color;
+
+// Default background color for disabled states, Collapse wrappers,
+// and several active and hover states.
+$background-color-base  : #f7f7f7;
+$background-color-active: #eee;
+
+// Disabled states
+$disabled-color         : rgba(0, 0, 0, 0.25);
+$disabled-bg            : $background-color-base;
+$disabled-color-dark    : rgba(255, 255, 255, 0.35);
+
+// Shadow
+$shadow-color           : rgba(0, 0, 0, .2);
+
+// Buttons
+
+$btn-primary-color      : #fff;
+$btn-primary-bg         : $primary-color;
+
+$btn-default-color      : $text-color;
+$btn-default-bg         : #fff;
+$btn-default-border     : $border-color-base;
+
+$btn-danger-color       : $error-color;
+$btn-danger-bg          : $background-color-base;
+$btn-danger-border      : $border-color-base;
+
+$btn-disable-color      : $disabled-color;
+$btn-disable-bg         : $disabled-bg;
+$btn-disable-border     : $border-color-base;
+
+
+$btn-group-border       : $primary-7;
+
+
+// Radio buttons
+$radio-button-bg        : $btn-default-bg;
+$radio-button-color     : $btn-default-color;
+
+
+// Layout
+$layout-body-background      : #ececec;
+$layout-header-background    : #404040;
+$layout-footer-background    : $layout-body-background;
+$layout-sider-background     : $layout-header-background;
+$layout-trigger-color        : #fff;
+
+// Form
+// ---
+$label-required-color        : $highlight-color;
+$label-color                 : $heading-color;
+
+// Input
+// ---
+$input-placeholder-color         : hsv(0, 0, 75%);
+$input-color                     : $text-color;
+$input-border-color              : $border-color-base;
+$input-bg                        : #fff;
+$input-addon-bg                  : #eee;
+$input-hover-border-color        : $primary-color;
+$input-disabled-bg               : $disabled-bg;
+
+// Tooltip
+// ---
+//** Tooltip text color
+$tooltip-color: #fff;
+//** Tooltip background color
+$tooltip-bg: rgba(0, 0, 0, .75);
+//** Tooltip arrow color
+$tooltip-arrow-color: $tooltip-bg;
+
+// Popover
+// ---
+//** Popover body background color
+$popover-bg: #fff;
+//** Popover text color
+$popover-color: $text-color;
+//** Popover arrow color
+$popover-arrow-color: $popover-bg;
+
+// Modal
+// --
+$modal-mask-bg: rgba(55, 55, 55, 0.6);
+
+// Progress
+// --
+$progress-default-color: $primary-color;
+$progress-remaining-color: $background-color-base;
+
+// Menu
+// ---
+$menu-dark-bg: $layout-header-background;
+$menu-dark-submenu-bg: #333;
+
+// Table
+// --
+$table-header-bg: $background-color-base;
+$table-header-sort-bg: $background-color-active;
+$table-row-hover-bg: $primary-1;
+$table-selected-row-bg: #fafafa;
+
+// Tag
+// --
+$tag-default-bg: #f3f3f3;
+$tag-default-color: $text-color;
+
+// TimePicker
+// ---
+$time-picker-selected-bg: $background-color-base;
+
+// Rate
+// ---
+$rate-star-color: #f5a623;
+$rate-star-bg: #e9e9e9;
+
+// Card
+// ---
+$card-head-color: $heading-color;
+$card-head-background: $component-background;
+
+// Tabs
+// ---
+$tabs-card-head-background: #f9f9f9;
+
+// BackTop
+$back-top-color: #fff;
+$back-top-bg: rgba(64, 64, 64, 0.4);
+$back-top-hover-bg: rgba(64, 64, 64, 0.6);
+
+// Avatar
+$avatar-bg: #ccc;
+$avatar-color: #fff;
+
+// Calendar
+$calendar-date-color: #666;
+$calendar-disable-color: #aaa;

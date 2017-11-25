@@ -1,0 +1,145 @@
+@import 'src/styles/mixin';
+
+.app__drawer{
+  color: #fff;
+  display: flex;
+
+  :global(.ant-modal) {
+    padding-bottom: 60px;
+    flex: 1;
+
+    :global(.ant-modal-content){
+      height: 100%;
+      background-color: transparent;
+      overflow: auto;
+
+      :global(.ant-modal-close) {
+        color: #fff;
+      }
+
+      :global(.ant-modal-header) {
+        background-color: transparent;
+        border-bottom: none;
+        display: flex;
+        justify-content: center;
+
+        .search__app{
+          width: 200px;
+          color: #fff;
+
+          :global(.ant-input){
+            opacity: .7;
+            color: #fff;
+            background-color: rgba(255, 255, 255, .2)
+          }
+          :global(.ant-input:focus), :global(.ant-input:hover){
+            opacity: 1;
+            border-color: inherit;
+          }
+          :global(.ant-input-suffix){
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+.bg__blured{
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-out;
+  background-color: #000;
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .bg__image{
+    filter: url(#blur-effect-1);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+  }
+}
+
+
+.items {
+  
+  .item{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-bottom: 25px;
+    
+      :global(.react-contextmenu-wrapper) {
+        width: 100%;
+      }
+  }
+  .item::before{
+    content:'';
+    padding:50% 0; /* vertical value as  100% equals width */
+    display:inline-block;
+  }
+  a{
+    transition: all 0.3s;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    text-shadow: 2px 2px 8px #000;
+  }
+  a:hover{
+    transform: scale(1.2);
+  }
+}
+
+
+//xs only
+@media(max-width: $screen-xs-max) {
+  .app__drawer{
+    :global(.ant-modal-body) {
+      padding: 16px 0;
+    }
+  }
+}
+
+//xs lanscape
+@media(min-width: $screen-xs-min) and (max-width:$screen-xs-max) {
+  .app__drawer{
+    :global(.ant-col-xs-6) {
+      width: 16.66666667%;
+    }
+  }
+}
+
+// Small grid
+@media (min-width: $screen-sm-min) {
+  
+}
+
+
+// Medium grid
+@media (min-width: $screen-md-min) {
+  
+}
+
+
+// Large grid
+@media (min-width: $screen-lg-min) {
+  
+}
+
+
+// Extra Large grid
+@media (min-width: $screen-xl-min) {
+  
+}

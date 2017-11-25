@@ -1,0 +1,59 @@
+@import "../../../styles/mixin.scss";
+
+.drawer__component{
+  .sider {
+    height: 100%;
+    box-shadow: 1px 0 6px rgba(0,0,0,.6);
+  }
+}
+
+  .header {
+    &:global(.ant-layout-header){
+      display: flex;
+      padding: 0;
+      box-shadow: 0 1px 6px rgba(0,0,0,.6);
+      z-index: 3;
+    }
+
+    .btn__custom__trigger{
+      cursor: pointer;
+      line-height: 40px!important;
+      margin: 0 10px;
+    }
+
+    .title {
+      width: 200px;
+      text-align: center;
+      background-color: rgba(0, 0, 0, .2);
+      position: relative;
+    }
+    .content {
+      flex: 1;
+      padding-left: 10px;
+    }
+  }
+
+@media (max-width: $screen-sm-max) {
+  .drawer__component{
+    z-index: 2;
+
+    .mask {
+      position: fixed;
+      background-color: rgba(0, 0, 0, .6);
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+
+      &.show {
+        display: block;
+      }
+      &.hide {
+        display: none;
+      }
+    }
+    .sider {
+      position: fixed !important;
+      height: 100%;
+    }
+  }
+}

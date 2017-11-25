@@ -1,0 +1,16 @@
+#import "../../fragments/user_profile.gql"
+
+mutation userProfileDeleteAvatar(
+  $user_id: Int!
+  $avatar: String
+) {
+  userProfileDeleteAvatar(
+    user_id: $user_id
+    avatar: $avatar
+  ){
+    ok
+    profile{
+      ...UserProfile
+    }
+  }
+}

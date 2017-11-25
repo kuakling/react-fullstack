@@ -1,0 +1,6 @@
+mutation{
+  logout {
+    ok
+    expires_at
+  }
+}

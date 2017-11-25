@@ -1,0 +1,60 @@
+/* Define some variables we might want to use elsewhere */
+:root {
+  --fg: #0b2296;
+}
+
+/* Implictly local.  .hello will get transformed into a hashed class in
+our React code, so that we could also use .hello in conjunction with another
+component without the two clashing */
+.hello {
+  h1 {
+    margin: 0;
+    /* Variables can be injected into our resulting CSS */
+    color: var(--fg);
+    font-size: 4rem;
+  }
+  /* We can nest other classnames, too, which are automatically hashed */
+  .logo {
+    width: 250px;
+  }
+}
+
+
+
+
+.container {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex-direction: column;
+}
+
+.header {
+    max-height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    background-color: rgba(0, 0, 0, .5);
+    box-shadow: 0 1px 6px rgba(0,0,0,.2);
+    color: #fff;
+    // display: flex;
+    // overflow: hidden;
+  a{
+    color: #fff;
+  }
+
+  .left__pane, .right__pane {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+
+    .item {
+      margin: 0 6px;
+    }
+  }
+  .left__pane {
+    text-align: left;
+  }
+  .right__pane {
+    text-align: right;
+  }
+}
